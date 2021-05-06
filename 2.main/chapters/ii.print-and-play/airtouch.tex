@@ -161,11 +161,11 @@
 				of the sum of the areas of each outlet $i$ and the difference in pressure
 				between the inside of the object and the atmosphere:
 
-				% \begin{align}
-				% 	Q_I &= \tsum Q_i \nonumber \\
-				% 			&= C\tsum A_i \sqrt{\Delta P}
-				% 			\label{eqn:flow-per-outlet}
-				% \end{align}
+				\begin{align}
+					Q_I &= C\sum Q_i \nonumber \\
+							&= C\sum A_i \sqrt{\Delta P}
+							\label{eqn:flow-per-outlet}
+				\end{align}
 
 				Now consider the situation where we cover one outlet. Because of
 				continuity, the input flow (held constant by the air compressor and
@@ -174,28 +174,28 @@
 				compensate for the decreased total discharge area. Assuming we have
 				blocked outlet $x$, we now have
 
-				% \begin{align}
-				% 	C\tsum A_i \sqrt{\Delta P} &= C\left( \tsum A_i - A_x \right) \sqrt{\Delta P_x}
-				% 	\label{eqn:pres_touch}
-				% \end{align}
+				\begin{align}
+					C\sum A_i \sqrt{\Delta P} &= C\left( \sum A_i - A_x \right) \sqrt{\Delta P_x}
+					\label{eqn:pres_touch}
+				\end{align}
 
 				illustrating that with a smaller total area we must have a new, larger
 				pressure $\Delta P_x$. Solving Equation \ref{eqn:pres_touch} for $\Delta P_x$
 				allows us to predict the new pressure that will result from covering an
 				outlet of cross-sectional area $A_x$:
 
-				% \begin{align}
-				% 	\Delta P_x =& \frac{(\tsum A_i)^2 \Delta P}{(\tsum A_i - A_x)^2}
-				% 	\label{eqn:pressure-from-area}
-				% \end{align}
+				\begin{align}
+					\Delta P_x =& \frac{(\sum A_i)^2 \Delta P}{(\sum A_i - A_x)^2}
+					\label{eqn:pressure-from-area}
+				\end{align}
 
 				or, equivalently, given a pressure change of $\Delta P_x$, the outlet area
 				which resulted in that pressure change:
 
-				% \begin{align}
-				% 	A_x = \tsum A_i \left(1 - \sqrt{\frac{\Delta P}{\Delta P_x}} \right)
-				% 	\label{eqn:area-from-pressure}
-				% \end{align}
+				\begin{align}
+					A_x = \sum A_i \left(1 - \sqrt{\frac{\Delta P}{\Delta P_x}} \right)
+					\label{eqn:area-from-pressure}
+				\end{align}
 				
 				As presented here, these fluid dynamics equations work with
 				incompressible, steady flows---that is, liquids flowing in steady
