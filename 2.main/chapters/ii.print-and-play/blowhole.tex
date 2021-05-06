@@ -50,15 +50,14 @@
     Adding interactivity to 3D-printed objects in an end-user-friendly way is a
     difficult undertaking. While doing so can enable a wealth of educational and
     accessibility applications (e.g., Figure \ref{fig:teaser}), adding
-    interactivity can require extra components \cite{Savage:2013kua,
-    Hook:2014kp}, special printing techniques \cite{Schmitz:2015vj,
-    Bacher:2016ji, Peng:2015hr}, or large features that can disrupt the object's
-    surface \cite{Harrison:2012kw, Ou:2016db, Savage:2015cs, Shi:2016ff} or make
-    it larger \cite{Li:2016bt}. While such solutions can offer rich interaction
-    possibilities such as buttons, touch sensitivity, and grasp sensing, many
-    useful applications can be enabled by simply ``tagging'' 3D models, allowing
-    a system to know what part of a model a user is interested in and respond
-    with information.
+    interactivity can require extra components \cite{Savage:2013, Nappey:2014},
+    special printing techniques \cite{Schmitz:2015, Bacher:2016, Peng:2015}, or
+    large features that can disrupt the object's surface \cite{Harrison:2012kw,
+    Ou:2016a, Savage:2015, Shi:2016} or make it larger \cite{Li:2016}. While
+    such solutions can offer rich interaction possibilities such as buttons,
+    touch sensitivity, and grasp sensing, many useful applications can be
+    enabled by simply ``tagging'' 3D models, allowing a system to know what part
+    of a model a user is interested in and respond with information.
     
     In this paper, we present \textit{\bh}, a system for unobtrusively tagging
     3D models or parts of models. Inspired by previous work in acoustic sensing,
@@ -83,81 +82,6 @@
           user blowing into the cavities and plays back the associated
           annotations.
     \end{itemize}
-
-  \section{Related Work}
-    Adding interactivity to 3D-printed (and other) objects has long been a
-    research topic in HCI. The main sensing approaches to date include embedding
-    electronics, non-acoustic external sensing, and both active and passive
-    acoustic sensing.
-    
-    \subsection{Embedded Electronics}
-        Embedding electronics in 3D-printed objects can enable directly sensing
-        the user. For example, adding an internal camera \cite{Savage:2013kua}
-        or accelerometers \cite{Hook:2014kp} can allow sensing of movable
-        elements. Other researchers have used multi-material 3D printers to add
-        capacitive touch pathways directly to flat-bottomed prints which are
-        placed on a touchscreen to enable sensing
-        \cite{Schmitz:2015vj,Taylor:2016cv,Gotzelmann:2016jc}. Electronics have
-        also been used to measure the deformation of flexible objects, using air
-        pressure sensors\cite{Slyper:2012gh}, piezoresistive wires
-        \cite{Bacher:2016ji}, or conductive fabric \cite{Peng:2015hr}. These
-        methods offer precise sensing of user input at the cost of special
-        parts, materials, printers, and post-printing assembly. In contrast, \bh
-        works with consumer-level 3D printers and works immediately with no
-        assembly; the trade-off is less-rich input.
-        
-    \subsection{External Sensing}
-        Some work has investigated adding touch detection to 3D-printed objects
-        via external sensors. A six-degree-of freedom force sensor
-        \cite{Hudin:2016fp} achieved high touch resolution, but required
-        recalibration upon object movement; computer vision approaches
-        \cite{Reichinger:2016ec,Shi:2016bn} avoid this issue, but suffer from
-        occlusion. \bh works in any position, does not require line-of-sight,
-        and needs no recalibration when moved.
-        
-    \subsection{Acoustic Sensing}
-        Many systems use sound as a method to add sensing capabilities to
-        objects. Active sensing approaches such as Touch \& Activate
-        \cite{Ono:2013cja} or Acoustruments \cite{Laput:2015hn} use a speaker to
-        create sound which is modified by user action on an object. These
-        methods require less expertise and effort from users than embedded
-        approaches, but rely on custom electronics or complex printing. \bh
-        requires no components beyond the 3D-printed model itself and is
-        printable in a single piece on a standard consumer-level 3D printer.
-    
-        Passive acoustic sensing approaches require the user to generate sound
-        themselves in conjunction with an object; many previous approaches,
-        however, require large interaction surfaces. Acoustic Barcodes uses the
-        sound made by a fingernail running over ridges to encode IDs
-        \cite{Harrison:2012kw}, occupying at minimum $7\times 22$~mm, while
-        Lamello \cite{Savage:2015cs} and Tickers \& Talker \cite{Shi:2016ff} use
-        elements which make distinct sounds when struck or strummed, requiring
-        $4\times 50$~mm (Lamello) or $11.5\times 17$~mm (Tickers \& Talker)
-        interaction elements. \bh hides the majority of its structure below the
-        surface, with only a 5~mm diameter hole required. The holes lead to
-        cavities which require \textit{volume}, but our design software
-        automates the selection of cavity size to fit within the available model
-        space.
-        
-        Most similar to \bh are approaches that use the sound of air
-				to add interactivity. Acoustic Voxels embeds multiple cavities
-				into an object to change the absorption of different
-				frequencies \cite{Li:2016bt}, but requires multiple 2cm-cube
-				structures to encode information, necessitating large objects.
-				Squeezapulse \cite{He:2017jc} identifies which of several
-				tubes in an object air is flowing through; however, the
-				corrugated tubes must be manually fabricated via molding and
-				inserted post-fabrication along with an embedded microphone.
-				Printone uses mathematical simulation to allow users to design
-				custom 3D-printable wind instruments \cite{Umetani:2016es},
-				but is optimized for musical applications and requires
-				extensive user input. Whoosh \cite{Reyes:2016iy} adds small
-				predefined cavities to a watch, allowing hands-free control
-				via blowing at the watch face. \bh extends this previous work,
-				adding multiple blow-activated tags to imbue arbitrary
-				3D-printed objects with interactivity. \bh achieves high
-				accuracy with up to nine tags per object---more than most
-				other passive acoustic approaches in the literature.
 
   \section{Blowhole}
     \bh is based on the property of acoustic resonance; a familiar example is
@@ -185,7 +109,7 @@
     greater than 45° from gravity---and \textit{bridging}---printing
     material with nothing underneath it as a support. We experimented with a
     number of shapes. Simple tubes (as used, for example, in Whoosh
-    \cite{Reyes:2016iy}) printed well at any orientation but quickly became too
+    \cite{Reyes:2016}) printed well at any orientation but quickly became too
     large to embed in smaller objects while supporting a range of frequencies.
     We tested several variations on shorter tubes connecting to larger cavities,
     which preserve a standard opening size but allow the production of a greater
@@ -502,7 +426,7 @@
       Wikipedia page for the associated cell component.
         
     \subsection{Globe} 
-      Similar to the example in Tickers and Talker \cite{Shi:2016ff}, we tagged
+      Similar to the example in Tickers and Talker \cite{Shi:2016}, we tagged
       the continents on a 3d-printed
       globe\footnote{\url{http://www.thingiverse.com/thing:17336}} (Figure
       \ref{fig:globe}). When a user blows into the associated hole, our software
@@ -551,10 +475,11 @@
     avoiding interventions during printing, post-print processing, and complex
     training processes. \bh is usable for simple cases; with up to six cavities,
     the system achieves a high user-independent performance of 98\%. As
-    illustrated by our examples in Figure \ref{fig:blowhole_demo,fig:blowhole_demo2},
-    six cavities are sufficient for many applications, and is a larger number of
-    tags per object than have been demonstrated by other passive acoustic-based
-    systems\cite{Reyes:2016iy,Li:2016bt,Shi:2016ff,Laput:2015hn,He:2017jc,Harrison:2012kw}.
+    illustrated by our examples in Figures \ref{fig:teaser}, and
+    \ref{fig:blowhole_demo2}, six cavities are sufficient for many applications,
+    and is a larger number of tags per object than have been demonstrated by
+    other passive acoustic-based systems\cite{Reyes:2016, Li:2016, Shi:2016,
+    Laput:2015, He:2017, Harrison:2012kw}.
     
     While \bh is successful, there is room for future improvement. We are
     interested in further characterizing the behavior of the cavities with
