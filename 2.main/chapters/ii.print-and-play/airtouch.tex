@@ -161,11 +161,11 @@
 				of the sum of the areas of each outlet $i$ and the difference in pressure
 				between the inside of the object and the atmosphere:
 
-				% \begin{align}
-				% 	Q_I &= \tsum Q_i \nonumber \\
-				% 			&= C\tsum A_i \sqrt{\Delta P}
-				% 			\label{eqn:flow-per-outlet}
-				% \end{align}
+				\begin{align}
+					Q_I &= C\sum Q_i \nonumber \\
+							&= C\sum A_i \sqrt{\Delta P}
+							\label{eqn:flow-per-outlet}
+				\end{align}
 
 				Now consider the situation where we cover one outlet. Because of
 				continuity, the input flow (held constant by the air compressor and
@@ -174,28 +174,28 @@
 				compensate for the decreased total discharge area. Assuming we have
 				blocked outlet $x$, we now have
 
-				% \begin{align}
-				% 	C\tsum A_i \sqrt{\Delta P} &= C\left( \tsum A_i - A_x \right) \sqrt{\Delta P_x}
-				% 	\label{eqn:pres_touch}
-				% \end{align}
+				\begin{align}
+					C\sum A_i \sqrt{\Delta P} &= C\left( \sum A_i - A_x \right) \sqrt{\Delta P_x}
+					\label{eqn:pres_touch}
+				\end{align}
 
 				illustrating that with a smaller total area we must have a new, larger
 				pressure $\Delta P_x$. Solving Equation \ref{eqn:pres_touch} for $\Delta P_x$
 				allows us to predict the new pressure that will result from covering an
 				outlet of cross-sectional area $A_x$:
 
-				% \begin{align}
-				% 	\Delta P_x =& \frac{(\tsum A_i)^2 \Delta P}{(\tsum A_i - A_x)^2}
-				% 	\label{eqn:pressure-from-area}
-				% \end{align}
+				\begin{align}
+					\Delta P_x =& \frac{(\sum A_i)^2 \Delta P}{(\sum A_i - A_x)^2}
+					\label{eqn:pressure-from-area}
+				\end{align}
 
 				or, equivalently, given a pressure change of $\Delta P_x$, the outlet area
 				which resulted in that pressure change:
 
-				% \begin{align}
-				% 	A_x = \tsum A_i \left(1 - \sqrt{\frac{\Delta P}{\Delta P_x}} \right)
-				% 	\label{eqn:area-from-pressure}
-				% \end{align}
+				\begin{align}
+					A_x = \sum A_i \left(1 - \sqrt{\frac{\Delta P}{\Delta P_x}} \right)
+					\label{eqn:area-from-pressure}
+				\end{align}
 				
 				As presented here, these fluid dynamics equations work with
 				incompressible, steady flows---that is, liquids flowing in steady
@@ -395,7 +395,7 @@
 				touches on each outlet. We found that with the smaller area increments,
 				the pressure change between neighboring outlet sizes was insufficient to
 				offer a clear separation in the presence of sensor noise (approximately
-				0.01 kPa). Therefore, all of our subsequent objets are printed with at
+				0.01 kPa). Therefore, all of our subsequent objects are printed with at
 				least a 0.1\,mm$^2$ separation between hole areas. Table
 				\ref{tab:hole-sizes} illustrates, at actual size, the final set of 12
 				outlet dimensions we use.
@@ -539,7 +539,7 @@
 		socket connection) from Python code running the touch detection described
 		above.
 		
-		\subsection{Interactive 3D Bar Chart}
+		\subsection*{Interactive 3D Bar Chart}
 			Recent work has highlighted the benefits of data
 			physicalization~\cite{Jansen:2015cu}. We designed a three-dimensional bar
 			plot displaying the relation between the submitted and accepted papers in
@@ -549,7 +549,7 @@
 			application shows the acceptance rate, number of accepted papers for the
 			year and conference in question.
 		    
-		\subsection{Interactive Animals}
+		\subsection*{Interactive Animals}
 			\at can identify interactions on objects of varying geometries, but with
 			the same outlet configurations, with a single, pre-trained machine
 			learning model. We fabricated a set of interactive animals of different
@@ -559,14 +559,14 @@
 			the nose, ear, back and leg. When a location is touched, the
 			corresponding label is displayed (Figure \ref{fig:app_2}).
 		    
-		\subsection{Grasp Sensing}
+		\subsection*{Grasp Sensing}
 			To showcase \at's dual-touch sensing capabilities, we developed a
 			touch-sensing sphere (Figure \ref{fig:app_3}). We augmented a sphere with
 			four touch locations throughout its surface. When an outlet is covered,
 			the companion application highlights which face is touched. When two
 			outlets are covered simultaneously, the system highlights both faces.
 		    
-		\subsection{Color Hue Selector}
+		\subsection*{Color Hue Selector}
 			\at can enable up to 12 interactive locations on 3D-printed objects. We
 			designed a circular color hue selector for a drawing application (Figure
 			\ref{fig:app_4}). The user selects a color using the selector, and sketch
@@ -579,7 +579,7 @@
 		the fabricated objects. Although we employed an air compressor to power our
 		fabricated objects, other air sources might be used, granted they guarantee
 		a constant stream of air. A miniature air pump, similar to the one used by
-		V\'azquez and collaborators in~\cite{Vazquez:2015dm}, can power \at-enabled
+		V\'azquez and collaborators in~\cite{Vazquez:2015}, can power \at-enabled
 		objects given their low pressure requirements.
 		
 		Another limitation of our technique is that it's only able to augment
