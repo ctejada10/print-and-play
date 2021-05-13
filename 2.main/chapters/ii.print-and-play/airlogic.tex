@@ -1,4 +1,26 @@
 \chapter{AirLogic}
+
+  \begin{figure}[h]
+    \centering
+    \subfloat[]{
+      \label{fig:animal_family}
+      \includegraphics[width=0.33\textwidth]{print-and-play/airtouch/animal_family.jpg}
+    }
+    \subfloat[]{
+      \label{fig:structure}
+      \includegraphics[width=0.33\textwidth]{print-and-play/airtouch/bunny_render.jpg}
+    } 
+    \subfloat[]{
+      \label{fig:touch-bunny}
+      \includegraphics[width=0.33\textwidth]{print-and-play/airtouch/touch-bunny_ear.jpg}
+    }
+    \label{fig:teaser}
+
+    \caption{\at augments 3D-printed objects to enable touch-sensitivity. It works
+      by detecting the pressure change resulting from users blocking tiny air
+      outlets fabricated into the objects.}
+  \end{figure}
+
   \section{Abstract}
     The promise of on-demand fabrication of custom, interactive devices is
     closer to reality thanks to recent developments in 3D-printing of
@@ -53,7 +75,6 @@
     object itself. As such, \al allows designers to prototype
     objects that are instantly interactive once 3D printed.
     
-    % Change this paragraph in the final version to make it sound to "our" vision of PaP.
     This work contributes to the existing track of research on embedding
     functionality in objects during the fabrication process in order to
     facilitate and speed-up prototyping interactive
@@ -87,7 +108,7 @@
     functions analogous to those preformed by electrical circuits. Here we
     briefly explain how each of \al's three main parts (input, logic,
     output) work in the context of the sample object illustrated in
-    \cref{fig:teaser}, A; later sections describe these components in
+    Figure \ref{fig:teaser}, A; later sections describe these components in
     greater detail.
 
     After designing and printing the bunny, the user can immediately
@@ -106,11 +127,11 @@
 
     While the functioning of the input and output widgets is fairly
     intuitive, the operation of flueric logic gates is less so.
-    These operate on the principle of \textit{ momentum transfer }
+    These operate on the principle of \textit{momentum transfer}
     between jets of air. The idea is that the course of an air jet
     can be changed by the force of another jet striking it from the
     side. In the case of the \texttt{OR} gate (schematically
-    illustrated in \cref{fig:logic-widgets}, B), a single jet proceeds
+    illustrated in Figure \ref{fig:logic-widgets}, B), a single jet proceeds
     directly at an angle through the central ``interaction area'' to the
     output. When both jets are present, they collide with each other,
     canceling each other's angle, and form a single coherent jet that exits
@@ -121,12 +142,11 @@
     functionality of other components. The vents allow any such negative
     flow to be safely discharged to atmosphere.
 
-    \begin{figure}[H]
-      \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
-        {example-image-duck}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.5\textwidth]{example-image-duck}
       \caption{Operating principle}
       \label{fig:app-slider}
-      \Description{An awesome duck.}
     \end{figure}
 
   \section{Related Work}
@@ -274,21 +294,20 @@
         energy storage via a buckling mechanism, these devices must be
         manually reset after each use to recover the lost energy.
 
-      % Dan
-      \subsection{Fluerics}
-      \label{sec:fluerics}
+      \subsection{Fluerics}\label{sec:fluerics}
         Although many non-electrical computing systems have potential, none
         described in the preceding section are viable for achieving our
         goal of fabricating interactive devices requiring little to no user
         intervention in the production process. To do so, we require a
         computing substrate with the following properties:
-          \begin{itemize}
-            \item it should be able to be completely produced on a single
-              printer with no user intervention;
-            \item it should be capable of sensing, logic, and output;
-            \item it should be embeddable in objects during printing;
-            \item and it should be accessible to non-expert users.
-          \end{itemize}
+
+        \begin{itemize}
+          \item it should be able to be completely produced on a single
+            printer with no user intervention;
+          \item it should be capable of sensing, logic, and output;
+          \item it should be embeddable in objects during printing;
+          \item and it should be accessible to non-expert users.
+        \end{itemize}
         
         The only available technology that meets all of these requirements
         is \textit{fluerics} or \textit{fluidic logic}, a nearly forgotten field
@@ -301,7 +320,7 @@
         jet~\cite[p.~64]{CharlesBelsterling:1971}. By creating specific
         geometrical arrangements of channels that shape and direct the
         fluid streams, a multitude of operational elements can be
-        created~\cite{Glaettli:1964}, as shown in \cref{fig:logic-widgets}.
+        created~\cite{Glaettli:1964}, as shown in Figure \ref{fig:logic-widgets}.
         
         Although fluerics was an active research area for nearly three
         decades, with widespread commercial application~\cite{:1968}, the
@@ -326,7 +345,7 @@
         printers. Using 3D printing allows us to achieve a high level of
         integration, incorporating flueric inputs, outputs, and logic gates
         directly into the structure of an object.
-  
+
   \section{\al Widget Toolkit}
       To facilitate making \al interactive objects, we present a widget toolkit
       consisting of pneumatic structures for sensing input, for providing
@@ -337,32 +356,31 @@
       
     \subsection{Input widgets}
       The internal design of our input widgets are based on an inverted
-      T-joint as shown in Figure~\ref{fig:input-widgets}, A. In its most
+      T-joint as shown in Figure \ref{fig:input-widgets}, A. In its most
       basic design, pressurized air is injected on the left and will only
       continue its trajectory on the right side of the object when the air
       vent at the top is blocked.
 
-      \begin{figure}[htb]
+      \begin{figure}
           \centering \includegraphics[width=0.8\columnwidth]
-            {figures/InputOutputWidgets_v5.pdf}
+            {print-and-play/airlogic/InputOutputWidgets_v5.pdf}
           \caption{Our five input widgets. (A) Touch, (B) Button, (C),
             Switch, (D) Slider, (E) Dial.}
           \label{fig:input-widgets}
-          \Description{}
         \end{figure}
 
       \begin{enumerate}
         \item \emph{Touch}. 
-          As shown in Figure~\ref{fig:input-widgets}A, touch widgets use
+          As shown in Figure \ref{fig:input-widgets}A, touch widgets use
           the most basic T-joint design, touching (or otherwise obstructing) the vent at the top
           allows the air to continue its trajectory inside the object.
         \item \emph{Push Button}. 
           Embedding a cap and slots inside the T-joint structure realizes a
-          push button (\cref{fig:input-widgets}, B). The cantilever spring
+          push button (Figure \ref{fig:input-widgets}, B). The cantilever spring
           design ensures the button cap always returns to its original
           position when released.
         \item \emph{Switch}. 
-          Figure~\ref{fig:input-widgets}, C shows the design of a switch.
+          Figure \ref{fig:input-widgets}, C shows the design of a switch.
           This widget design integrates a lever and a wedge on top of our
           basic T-joint structure. When moving the lever, the wedge
           covers the sensing structure, allowing the air flow to continue
@@ -395,7 +413,7 @@
         While the majority of our input, and output widgets require
         moving parts in order to operate, our logic widgets are capable of
         computing digital logic operations by interacting jets of air (see
-        \cref{sec:fluerics}). Our use of flueric structures to represent
+        Section \ref{sec:fluerics}). Our use of flueric structures to represent
         digital logic operations was motivated by their capability to carry
         out logic operations without any mechanical parts, or electronics.
         This capability highlights two main benefits. First,
@@ -412,23 +430,23 @@
         \begin{enumerate}
           \item \texttt{AND}. 
             We designed our \texttt{AND} logic gate widget
-            (\cref{fig:logic-widgets}-A,1) inspired by classic works in
+            (Figure \ref{fig:logic-widgets}-A,1) inspired by classic works in
             flueric jet deflection devices. This design presents our input
             controls to the left, and a single output on the middle right,
             with vents at the top and bottom. When only a single input is
-            present (\cref{fig:logic-widgets}-A,2), the flow is directed to
+            present (Figure \ref{fig:logic-widgets}-A,2), the flow is directed to
             the respective vent channel. If both inputs are present,
             however, their corresponding jets collide, redirecting the flow
-            to the output channel (\cref{fig:logic-widgets}-A,3).
+            to the output channel (Figure \ref{fig:logic-widgets}-A,3).
 
           \item \texttt{OR}. 
             Our \texttt{OR} logic gate widget
-            (\cref{fig:logic-widgets}-B,1) is also based on classic works
+            (Figure \ref{fig:logic-widgets}-B,1) is also based on classic works
             in fluerics. This design is made up of two inputs channel in
             the left, an output channel to the right, and two vents in the
             top and bottom. This design operates as an ``inclusive or'',
             meaning that if any of the inputs are active
-            (\cref{fig:logic-widgets}-B,2), the flow is directed to the
+            (Figure \ref{fig:logic-widgets}-B,2), the flow is directed to the
             output channel. Additionally, when both inputs are active, the
             flow from each combines and the resulting jet is directed to
             the output channel.
@@ -441,10 +459,10 @@
             channels are located in the top, and bottom right, while the
             input remain unchanged from the \texttt{AND} design. When a
             single input is present, the air jet is directed to the
-            respective output vents (\cref{fig:logic-widgets}-C,1). If both
+            respective output vents (Figure \ref{fig:logic-widgets}-C,1). If both
             inputs are present, however, their respective jets collide,
             redirecting the flow to the center vent
-            (\cref{fig:logic-widgets}-C,2).
+            (Figure \ref{fig:logic-widgets}-C,2).
 
           \item \texttt{NOT}. 
             Last, our \texttt{NOT} logic gate widget, we likewise utilize
@@ -453,21 +471,21 @@
             of output and vents. When employed as a \texttt{NOT} logic gate
             widget, this design presents an input and a power channel on
             the left, and an output in the lower right with two vents above
-            it (\cref{fig:logic-widgets}-D,1). In this configuration the power
+            it (Figure \ref{fig:logic-widgets}-D,1). In this configuration the power
             channel provides a constant flow of air, which is directed at
-            the output channel (\cref{fig:logic-widgets}-D,2). If there's flow
+            the output channel (Figure \ref{fig:logic-widgets}-D,2). If there's flow
             incoming from the input channel, this jet collides with the
             power jet, causing the flow to be redirected to a vent
-            (\cref{fig:logic-widgets}-D,3).
+            (Figure \ref{fig:logic-widgets}-D,3).
         \end{enumerate}
         
-        \begin{figure}[H]
-          \includegraphics[width=\minof{\columnwidth}{0.7\textwidth}]
-            {figures/LogicGates_v2.pdf}
+        \begin{figure}
+          \centering
+          \includegraphics[width=0.8\textwidth]
+            {print-and-play/airlogic/LogicGates_v2.pdf}
           \caption{AirLogic logic widgets. (A) \texttt{AND}, (B)
             \texttt{OR}, (C) \texttt{XOR}, (A) \texttt{NOT}.}
         \label{fig:logic-widgets}
-          \Description{An awesome duck.}
         \end{figure}
 
       \subsection{Output Widgets}
@@ -481,11 +499,11 @@
             Inspired by research in shape-changing
             interfaces~\cite{Follmer:2013}, we designed our pin widget to
             provide visual output as a result of our logic operations
-            (\cref{fig:output-widgets}-A). Our pin widget is comprised of a
+            (Figure \ref{fig:output-widgets}-A). Our pin widget is comprised of a
             cylindrical piston inside a camber. This piston can be actuated
             using compressed air, reaching a height of up to 4\,cm.
           \item \emph{Whistle}. 
-            Our whistle widget (\cref{fig:output-widgets}-B) is used to
+            Our whistle widget (Figure \ref{fig:output-widgets}-B) is used to
             provide acoustic output as a result of a logic operation. This
             widget is made up of three main components: an intake, a
             fipple, and a chamber. Air resulting from our logic operations
@@ -496,27 +514,27 @@
           \item \emph{Oscillating actuator}. 
             Another manner to provide visual output is to agitate sections
             of an \al object. To do so, we constructed a wiggler widget
-            (\cref{fig:output-widgets}-C), comprised of a lever that is
+            (Figure \ref{fig:output-widgets}-C), comprised of a lever that is
             pushed by incoming jets of air. When moving, the lever shortly
             falls out of phase with the air jet, and returns to its original
             position, causing it to be pushed once more.
           \item \emph{Vibration motor}. 
             In order to provide vibrotactile feedback on an \al object, we
             designed a vibration motor widget
-            (\cref{fig:output-widgets}-D). This widget operates similarly
+            (Figure \ref{fig:output-widgets}-D). This widget operates similarly
             to electronic vibration motors commonly found on smartphones,
             where a mass is spun up to create different vibration patterns.
             In our design, air incoming from our logic widgets spins a
             fan-like structure, causing vibrations in the \al object.
         \end{enumerate}
 
-        \begin{figure}[H]
-          \includegraphics[width=\minof{0.8\columnwidth}{0.5\textwidth}]
-            {figures/Widget_Output.pdf}
+        \begin{figure}
+          \centering
+          \includegraphics[width=0.8\textwidth]
+            {print-and-play/airlogic/Widget_Output.pdf}
           \caption{Output widgets. (A) Pin, (B) whistle, (C) oscillating
             actuator, (4) Vibration Motor}
           \label{fig:output-widgets}
-          \Description{}
         \end{figure}
 
   \section{Designing \al Objects}
@@ -532,7 +550,7 @@
 
     Further, to aid designers augment their 3D models with \al
     functionalities, we developed a widget library, available as a plugin
-    for Autodesk Fusion 360, shown in \cref{fig:design-environment}. Our
+    for Autodesk Fusion 360, shown in Figure \ref{fig:design-environment}. Our
     library contains instantiated versions of all of our widgets, enabling
     the designer to embed input, logic processing, and output capabilities
     to existing 3D models in a single step. The design process starts by
@@ -541,20 +559,21 @@
     Last, using an algorithm similar to PipeDream~\cite{Savage:2014}, we create
     channels connecting the widgets.
 
-    While prototyping with encapsulated widgets is a heavily manual process for the designer and involves making many connections, fabricating and assembling an \al-powered 3D model with internal widgets requires little intervention. The majority
-    of the object is printed as a single structure, involving only the
-    assembly of moving parts (e.g., button, slider), and aesthetic covers.
+    While prototyping with encapsulated widgets is a heavily manual process for
+    the designer and involves making many connections, fabricating and
+    assembling an \al-powered 3D model with internal widgets requires little
+    intervention. The majority of the object is printed as a single structure,
+    involving only the assembly of moving parts (e.g., button, slider), and
+    aesthetic covers.
 
-    \begin{figure}[H]
-      \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
-        {figures/Design Environment.png}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.8\textwidth]
+        {print-and-play/airlogic/Design Environment.png}
       \caption{The widget library (right) and a Dial widget dropped by
         using the interface. In the interface, users can choose widgets and
         insert them into their design.}
       \label{fig:design-environment}
-      \Description{The widget library (right) and a Dial widget dropped by
-        using the interface. In the interface, users can choose widgets and
-        insert them into their design.}
     \end{figure}
 
   \section{Implementation}
@@ -628,15 +647,15 @@
         kilopascals (kPa), to \red{999} kPa. In contrast, our logic widgets
         presented an operating range of \red{000} to \red{000} kPa, while
         our output widgets operate best when actuated with pressured from
-        \red{111} to \red{111} kPa. \cref{fig:operating-ranges} presents
+        \red{111} to \red{111} kPa. Figure \ref{fig:operating-ranges} presents
         the results of our explorations.
 
-        \begin{figure}[H]
-          \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
+        \begin{figure}
+          \centering
+          \includegraphics[width=0.5\textwidth]
             {example-image-duck}
           \caption{Operating ranges from our widgets}
           \label{fig:operating-ranges}
-          \Description{An awesome duck.}
         \end{figure}
 
         In addition, we found that, in average, our logic widgets lose
@@ -645,14 +664,13 @@
         of \red{444} kPa. We did not evaluate the pressure losses of our
         output widgets, as they are intended to be the last element in our
         \red{circuits}. A detailed view of our results can be found in
-        \cref{fig:pressure-losses}.
+        Figure \ref{fig:pressure-losses}.
 
-        \begin{figure}[H]
-          \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
-            {pressure-losses}
+        \begin{figure}
+          \centering
+          \includegraphics[width=\textwidth] {print-and-play/airlogic/pressure-losses}
           \caption{Pressure losses}
           \label{fig:pressure-losses}
-          \Description{An awesome duck.}
         \end{figure}
 
         % What does these results mean?
@@ -668,12 +686,13 @@
         Using our touch, \texttt{OR}, and wiggler widgets, we constructed
         an interactive bunny that wiggles its tail when pet in the
         correct locations.
-        \begin{figure}[H]
-          \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
+
+        \begin{figure}[h]
+          \centering
+          \includegraphics[width=0.5\textwidth]
             {example-image-duck}
           \caption{Interactive bunny}
           \label{fig:app-bunny}
-          \Description{An awesome duck.}
         \end{figure}
       
       \subsubsection{Pitch switch}
@@ -683,12 +702,12 @@
         she wants to play using a slider, and when the ``play'' button is
         pressed, the desired tone is played using the respective whistle.
 
-        \begin{figure}[H]
-          \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
+        \begin{figure}[h]
+          \centering
+          \includegraphics[width=0.5\textwidth]
             {example-image-duck}
           \caption{Pitch slider}
           \label{fig:app-slider}
-          \Description{An awesome duck.}
         \end{figure}
       
       \subsubsection{Interactive puzzle}
@@ -697,12 +716,12 @@
         puzzle using the letters U, I, S, and T. When arranged in the
         correct order to spell UIST, a pin with a flag attached is raised.
 
-        \begin{figure}[H]
-          \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
+        \begin{figure}
+          \centering
+          \includegraphics[width=0.5\textwidth]
             {example-image-duck}
           \caption{Interactive Puzzle}
           \label{fig:app-slider}
-          \Description{An awesome duck.}
         \end{figure}
       
       \subsubsection{Handheld pin display}
@@ -713,12 +732,12 @@
         example, depending on what combination of buttons are pressed, a
         different pin is raised.
         
-        \begin{figure}[H]
-          \includegraphics[width=\minof{\columnwidth}{0.5\textwidth}]
+        \begin{figure}[h]
+          \centering
+          \includegraphics[width=0.5\textwidth]
             {example-image-duck}
           \caption{Handheld pin display}
           \label{fig:app-slider}
-          \Description{An awesome duck.}
         \end{figure}
 
   \section{Discussion \& Limitations}
@@ -732,11 +751,12 @@
 
       \subsubsection{Chaining logic widgets}
         While our applications illustrate the capacity of using multiple
-        logic widgets in an \al object (see \cref{sec:pitch} and
-        \cref{sec:puzzle}), this functionality is limited in our current
+        logic widgets in an \al object (see Figure \ref{sec:pitch} and
+        Section \ref{sec:puzzle}), this functionality is limited in our current
         implementation. During exploratory tests we found that our logic
         widget designs could be connected three different ways: in
-        parallel, balanced chained \texttt{AND}, and chained \texttt{OR}. We are not able to support unbalanced chained \texttt{AND}, and combinations.
+        parallel, balanced chained \texttt{AND}, and chained \texttt{OR}. We are
+        not able to support unbalanced chained \texttt{AND}, and combinations.
 
         The paramount reason that we can't do these things is that our
         \texttt{AND} design is reliant on identical pressures on both input
@@ -780,14 +800,15 @@
         isopropyl alcohol, obtaining promising results, however, more
         experimentation is still needed.
 
-        Additionally, we wish to explore subtractive fabrication methods
-        for constructing our widgets. We believe that because of its high
-        precision and clean cuts, laser cutting equipment presents a
-        promising alternative to fabricate \al objects. While \al objects
-        constructed using laser cutting equipment would require significantly
-        more manual assembly than our current implementation and would likely be limited to 2D, we envision a
-        further iteration of our design environment to provide stencils and
-        assembly guides for \al designs fabricated on such machinery.
+        Additionally, we wish to explore subtractive fabrication methods for
+        constructing our widgets. We believe that because of its high precision
+        and clean cuts, laser cutting equipment presents a promising alternative
+        to fabricate \al objects. While \al objects constructed using laser
+        cutting equipment would require significantly more manual assembly than
+        our current implementation and would likely be limited to 2D, we
+        envision a further iteration of our design environment to provide
+        stencils and assembly guides for \al designs fabricated on such
+        machinery.
         
       \subsubsection{Comparison with electronics}
         Despite the potential interactions that \al enables designers to
@@ -823,7 +844,7 @@
         to operate. We utilized an air compressor (JunAir 2000-40PD) to
         power our prototypes and widgets, however other air sources can be
         used to power our widgets. We demonstrate how users can power \al
-        objects using their lungs (see \cref{sec:handheld}), and designers
+        objects using their lungs (see Section \ref{sec:handheld}), and designers
         can use our characterization results to calculate the specific
         pressure requirements of their designs, and choose their air source
         accordingly.
