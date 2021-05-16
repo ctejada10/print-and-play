@@ -1,15 +1,24 @@
 \chapter{Introduction}
   \section{The Inequalities of Interactivity}
-    The ubiquity of personal computing brought with it an increasing
-    accessibility in creating interactive digital experiences.  In \red{XX}
-    years, we have gone from programming computers using punched cards, to
-    creating immersive virtual environments by dragging virtual elements and
-    dropping them in their respective
+    We are surrounded by products with dedicated physical interfaces, like
+    steering wheels, musical instruments, and game controllers. While the advent
+    of screen-based \red{devices} has led to a rise in touch, and mouse based
+    applications, there are some benefits of physicality that simply do not
+    translate to screen-based \red{experiences}~\cite{klemmer:2006}, like
+    hands-free interaction, speed, virtuosity, and control. \red{This is the
+    main reason why we see experts use dedicated physical interfaces in high
+    stake situations instead of their screen-based counterparts.}
+
+    Because the increase presence of screen-based devices, significant advances
+    has been made to streamline the creation of screen-based \red{interactive
+    experiences}.  In 60 years, we have gone from programming computers using
+    punched cards, to creating immersive virtual environments by dragging
+    virtual elements and dropping them in their respective
     places~\footnote{\href{https://unity.com}{Unity}}.  Currently, you can
     create an online store without knowing anything about web
-    programming~\footnote{\href{https://www.squarespace.com}{Squarespace}},
+    programming~\footnote{\href{https://www.squarespace.com}{Squarespace}}, or
     creating body-based augmented reality applications using visual
-    programming.\cite{Pohl:2020}, and \red{something else.}
+    programming~\cite{Pohl:2020}.
 
     Contrary to this ease of crafting interactive digital experiences,
     constructing interactive physical objects remains a challenging
@@ -18,10 +27,20 @@
     years~\cite{CHI, UIST}, no long-term research has explored ways to
     construct interactive experiences in the physical world. Because of this,
     constructing physical interactive experiences still require significant
-    domain knowledge, and remains out of reach for other-domain experts.
-   
-    \red{Closing paragraph.}
+    domain knowledge, and remains out of reach for other-domain experts. Although
+    existing research has explored electronic toolkits to lower the threshold of
+    making physical, interactive devices~\cite{Greenberg:2001, arduino}, these
+    require the assembly of electronic sensors, actuators and physical parts to
+    construct an interactive device.
 
+    While the process of assembling circuits and printed parts may seem
+    straightforward for some, this is an intricate process because
+    \red{reasons}, and remains out of the reach of other domain experts (e.g.,
+    doctors, architects). This stands in contrast to the easiness of creating
+    interactive applications for screen-based devices, where little to no domain
+    expertise is needed.
+   
+  % Play this up more
   \section{The Personal Fabrication Revolution} \label{sec:fab-revolution}
     A promising remedy that could tip the making scales to balance is
     personal fabrication. While the technologies that enable personal
@@ -30,9 +49,11 @@
 
     In their respective books Gershenfeld and Anderson describe a future where
     we all have a fabrication machine in our homes~\cite{Gershenfeld:2005,
-    Anderson:2012}.  Homologous to our current use of 2D paper printers,
+    Anderson:2012}.  Homologous to our current use of 2D paper printers, the
+    authors describe how in this potential future we would print our objects,
+    rather than buy them, dawning an age of on-demand fabrication.
 
-  \section{Broken Promises of the Fabrication Revolution}
+  \section{Broken Promises of the Fabrication Revolution} \label{sec:broken-promises}
     While fabrication machines have become accessible, and reliable enough to
     make the jump from industry and research laboratories to the hands of
     consumers and hobbyists, we are still far away from the fabrication
@@ -88,61 +109,136 @@
       \caption{Interesting stuff require expertise.}
     \end{figure}
 
-  \section{Towards On-Demand Fabrication of Interactive Devices}
-    Inspired by the personal fabrication \red{dream} described in Section
+  \section{Towards On-Demand Fabrication of Interactive Devices} \label{sec:on-demand}
+    Despite the utility of custom-made three-dimensional shapes, recent work has
+    highlighted that ``everyday makers'' are most interested in fabricating
+    objects they can interact with~\cite{Shewbridge:2014}. Inspired by these
+    findings, and the personal fabrication goal described in Section
     \ref{sec:fab-revolution}, this thesis explores a potential future where
-    not only objects are fabricated on-demand, but interactive devices.
+    digital fabrication equipment not only enables the construction of custom
+    three-dimensional shapes, but of interactive devices as well.
 
-    \red{Something else should go here. Maybe on what we gain by doing this,
-    why is this worth doing and important?  I should cite Everyday Makers
-    here.  Non-experts wanna print interactive stuff, not just shapes}
-
-    We tackle two of the main problems with fulfilling the fabrication
-    revolution: we help non-experts to make useful stuff, and they require no
-    previous knowledge to do so.
+    The creation of these interactive devices should be as natural and automatic
+    as possible. An ideal \red{form} would be homologous to today's paper
+    document creation pipeline: users create a document using a piece of
+    software (e.g., word processor), and proceed to print it using a 2D desktop
+    printer. Once the paper has finished printing, this process is completed;
+    there is nothing else to do.
 
     \subsection{Challenges}
-      Recent Human-Computer Interaction literature has explored numerous
-      techniques for constructing interactive devices using digital fabrication
-      equipment~\cite{Ballagas:2018}. Despite the various interaction modalities
-      these efforts enable, their adoption has been limited to research
-      laboratories. I postulate that this is due to two main factors:
+      Despite the recent research interests in the Human-Computer Interaction
+      community regarding the construction of interactive devices using digital
+      fabrication equipment~\cite{Ballagas:2018}, the majority of the introduced
+      techniques have yet to escape the research laboratories, and move on into
+      the masses.
 
-        \subsubsection*{Convoluted Post-print Activities}
-          Some of the proposed \red{mechanisms} to print interactive devices
-          require intricate operations to be carried out after the device has
-          finished printing. These can take the form of removal of support
-          material~\cite{Laput:2015}, connecting multiple circuit
-          ports~\cite{Schmitz:2019}, assembly of physical
-          parts~\cite{Savage:2015}, circuits~\cite{Murray-Smith:2008}, or
-          calibration of machine learning algorithms~\cite{Ono:2013}.
+      \subsubsection*{Convoluted Fabrication Pipelines}
+        A paramount research challenge researchers need to resolve is the
+        democratization of \red{techniques}. Revisiting the paper document
+        metaphor, when the same document is printed in different types of 2D
+        printers, the outcome is the same. So it should be when constructing
+        interactive devices: the method of construction should not affect the
+        capability of the device. Additionally, we should strive to automate the
+        construction process as much as possible, opting to use accessible
+        fabrication machines and devices over manual labor. We should also avoid
+        using non-accessible materials.
 
-          These processes require significant engineering expertise.
-
-        \subsubsection*{Prohibitive Fabrication Pipelines}
-          Other proposed \red{mechanisms} require \red{prohibitive} fabrication
-          processes to be enabled. Some require specialized printers~\cite{}, or
-          silicone casting~\cite{He:2017}
-
-          These processes require techniques, or equipment that are not in reach
-          for consumers or hobbyists.
-
-        \subsubsection*{Modifications to the object external geometry}
+      \subsubsection*{Complex Post-Print Activities}
+        An additional challenge is the removal of complex post-print activities.
+        Current fabrication pipelines for the construction of interactive
+        devices rely on convoluted post-print activities in order to fabricate
+        these devices. These post-print activities can take the shape of
+        assembly of circuits, printed parts, complex removal of support
+        material, or calibration of per-object, or per-user machine learning
+        models.
       
     \subsection{\papf}
-      To address the aforementioned challenges, this document proposes \papf:
-      a digital fabrication paradigm where interactive devices are
-      immediately usable after construction.
+      As a way towards the potential future of on-demand fabrication of
+      interactive devices described in Section \ref{sec:on-demand}, this thesis
+      introduces \papf: a digital fabrication paradigm where interactive objects
+      are printed instead of assembled. \pap fabrication techniques construct
+      objects that are immediately usable after fabrication, meaning there is no
+      assembly of parts, circuits, or calibration of machine learning models
+      needed. Additionally, techniques that are \pap-friendly, are constructable
+      using off-the-shelf fabrication equipment and materials.
 
-      \red{How do I do \pap?}
-        Air powered techniques. Why?
+      The concept of \papf directly addresses the shortcomings of the personal
+      fabrication revolution described in Section \ref{sec:broken-promises}:
+      \red{lack of things to fabricate using plastic}, and the necessity of
+      domain knowledge to fabricate interesting things. Because the techniques
+      presented in this thesis do not require special materials, or printers;
+      increasing the vocabulary of what can be constructed using simple
+      plastics. Additionally, because these techniques also do not require any
+      post-print activities or specific domain knowledge to be enabled, and all
+      provide an intuitive design environment for the creation of interactive
+      devices, this increases the target audience that can make use of these
+      techniques.
 
       \subsubsection*{Contributions of this Thesis}
-        This concept directly addresses the two main challenges from adoption of
-        personal fabrication equipment discussed above. First, it provides
-        non-experts with a variety of options to fabricate using off-the-shelf
-        personal fabrication equipment. Second, it does so by requiring no domain
-        expertise to construct these interactive devices.
+        This thesis focuses on the easy construction of interactive devices
+        without requiring significant post-fabrication activities (e.g.,
+        assembly of parts, circuits, calibration of machine learning models).
+        With this work, I enable the creation of devices in all the sections of
+        the interaction stack (Figure \ref{fig:stack}): devices that can sense,
+        process, and provide output to user's interactions.
 
-        \red{Something here how I do input, output, and logic. Maybe mix it with
-        intros to the papers}
+        An overarching theme of my work is \emph{air}. All of the work presented
+        in this thesis is powered by air, being from a constant, pressurized air
+        source (Chapters \ref{ch:airtouch}, \ref{ch:morphees}, and
+        \ref{ch:airlogic}), or from the user's lungs (Chapter
+        \ref{ch:blowhole}). The use of air as a \red{medium} to enable the
+        construction of interactive devices was motivated by two factors. First,
+        air behaviors have been extensively explored in physics, which gives
+        us a ample understanding how air behaves in a variety of situations, and
+        which ones of these lend themselves to digital fabrication pipelines.
+        Allowing us then to use these concepts to construct pre-trained machine
+        learning models, or use their respective mathematical equations. Second,
+        I can then embed internal structures inside three-dimensional models
+        that leverage these behaviors without greatly modifying the object's
+        external geometry. A summary of the individual contributions of each
+        effort is presented below:
+
+        \begin{figure}[h]
+          \centering
+          \includegraphics{example-image-duck}
+          \label{fig:stack}
+          \caption{Input - Processing - Output}
+        \end{figure}
+
+        \textsc{\at} extends the possibilities of pneumatic sensing on
+        fabricated objects by enabling sensing users interactions not only on
+        soft objects, but in rigid ones as well. \emph{\at} is based on basic
+        principles of fluid dynamics that relate pressure to discharge area:
+        when there is a change in the discharge area of a system, the pressure
+        will vary in return. Objects augmented with \emph{\at} can sense touch
+        interactions in up to 12 individual locations. These objects are
+        fabricated as a single structure without requiring any assembly of parts
+        or circuits. Additionally, they make use of pre-trained machine learning
+        models, so no per-object or per-user calibration is necessary.
+        
+        \textsc{\bh} continues to explore techniques for enabling sensing of
+        user's interactions on 3D-printed objects by addressing one of
+        \emph{\at's} principals shortcomings: the need for a constant air source
+        and pressure sensors. Based on the principle of acoustic resonance,
+        \emph{\bh} embeds resonant cavities in the interior of the model that,
+        when gently blown on, emit an identifiable sound. Interactive devices
+        constructed using \emph{\bh} are fabricated as a single structure using
+        commercially-available printers and materials, and make use of a
+        mathematical model to identify blow locations based on the frequency of
+        the generated sound.
+
+        Switching gears to computing, \textsc{AirLogic} aims to answer the
+        question ``how can we 3D-print devices that can think?'' Inspired by
+        research from the Cold War, we developed a series of widgets that can
+        not only sense user's interactions, and provide output to them, but also
+        compute simple logic operations (e.g., \texttt{AND, OR, NOT}, and
+        \texttt{XOR}).
+
+        Last, with \textsc{MorpheesPlug} I explore the construction of devices
+        that can provide physical output. This work was inspired by recent
+        research on shape-changing interfaces, where physical interfaces change
+        their shape depending on their intended use. We approached this concept
+        from a fabrication standpoint, creating a set of pneumatically-actuated
+        widgets that can represent a variety of changes in shape. These widgets
+        are fabricated as a single structure, using off-the-shelf printers and
+        materials.
