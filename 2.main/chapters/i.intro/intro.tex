@@ -5,15 +5,15 @@
     of screen-based \red{devices} has led to a rise in touch, and mouse based
     applications, there are some benefits of physicality that simply do not
     translate to screen-based \red{experiences}~\cite{klemmer:2006}, like
-    hands-free interaction, speed, virtuosity, and control. \red{This is the
-    main reason why we see experts use dedicated physical interfaces in high
-    stake situations instead of their screen-based counterparts.}
+    hands-free interaction, speed, virtuosity, and control. This is the reason
+    why we see most experts use dedicated physical interfaces instead of their
+    screen-based counterparts (e.g., airplane pilots, musicians, gamers).
 
     Because the increased presence of screen-based devices, significant advances
     has been made to streamline the creation of screen-based \red{interactive
-    experiences}.  In 60 years, we have gone from programming computers using
-    punched cards, to creating immersive virtual environments by dragging
-    virtual elements and dropping them in their respective
+    experiences}.  In 60 years, the state-of-the-art has gone from programming
+    computers using punched cards, to creating immersive virtual environments by
+    dragging virtual elements and dropping them in their respective
     places~\footnote{\href{https://unity.com}{Unity}}.  Currently, you can
     create an online store without knowing anything about web
     programming~\footnote{\href{https://www.squarespace.com}{Squarespace}}, or
@@ -34,11 +34,10 @@
     construct an interactive device.
 
     While the process of assembling circuits and printed parts may seem
-    straightforward for some, this is an intricate process because
-    \red{reasons}, and remains out of the reach of other domain experts (e.g.,
-    doctors, architects). This stands in contrast to the easiness of creating
-    interactive applications for screen-based devices, where little to no domain
-    expertise is needed.
+    straightforward for some, this is an intricate process because, and remains
+    out of the reach of other domain experts (e.g., doctors, architects). This
+    stands in contrast to the easiness of creating interactive applications for
+    screen-based devices, where little to no domain expertise is needed.
    
   % Play this up more
   \section{The Personal Fabrication Revolution} \label{sec:fab-revolution}
@@ -61,7 +60,8 @@
     analysis place 3D printer market penetration at almost 35\%, 77\% are
     relegated to the industry~\cite{}. This same analysis reveals that the main
     use for 3D printers is prototyping future products, rather than creation of
-    usable things. The results of this reports uncover two main
+    usable things. 
+    % The results of this report uncover two main findings:
 
     I believe that the lackluster adoption of personal fabrication machines is
     due to two main factors. First, current fabrication equipment is limited to
@@ -78,13 +78,13 @@
       \caption{Tea. Earl Grey. Hot}
     \end{figure}
 
-    The second issue relates to the expertise required to construct
-    \red{interesting} objects. While current personal fabrication equipment is
-    able to produce a variety of \red{intersting} objects from prosthetic arms
-    for children (Figure \ref{fig:expertise-prosthetic}) to intricate jewelry
-    pieces (Figure \ref{fig:expertise-jewelry}), the construction of these
-    objects require ample domain knowledge that consumers might not possess.
-    This leaves very limited options for low-entry uses for fabrication devices.
+    The second issue relates to the expertise required to construct usable
+    objects. While current personal fabrication equipment is able to produce a
+    variety of interesting objects from prosthetic arms for children (Figure
+    \ref{fig:expertise-prosthetic}) to intricate jewelry pieces (Figure
+    \ref{fig:expertise-jewelry}), the construction of these objects require
+    ample domain knowledge that consumers might not possess.  This leaves very
+    limited options for low-entry uses for fabrication devices.
 
     \begin{figure}[h]
       \centering
@@ -113,7 +113,7 @@
     Despite the utility of custom-made three-dimensional shapes, recent work has
     highlighted that ``everyday makers'' are most interested in fabricating
     objects they can interact with~\cite{Shewbridge:2014}. Inspired by these
-    findings, and the personal fabrication goal described in Section
+    findings, and the personal fabrication ideal described in Section
     \ref{sec:fab-revolution}, this thesis explores a potential future where
     digital fabrication equipment not only enables the construction of custom
     three-dimensional shapes, but of interactive devices as well.
@@ -126,11 +126,13 @@
     there is nothing else to do.
 
     \subsection{Challenges}
-      Despite the recent research interests in the Human-Computer Interaction
-      community regarding the construction of interactive devices using digital
-      fabrication equipment~\cite{Ballagas:2018}, the majority of the introduced
-      techniques have yet to escape the research laboratories, and move on into
-      the masses.
+      The concept of constructing interactive devices using digital fabrication
+      equipment is not new. A multitude of research endeavors in the
+      Human-Computer Interaction (HCI) community have explored techniques to
+      fabricate interactive devices using 3D-printers or other digital
+      fabrication equipment~\cite{Ballagas:2018}. However, despite these
+      advances, the introduced techniques have yet to escape the research
+      laboratories and move on into the masses. This is due to two main factors:
 
       \subsubsection*{Convoluted Fabrication Pipelines}
         A paramount research challenge researchers need to resolve is the
@@ -165,7 +167,7 @@
       The concept of \papf directly addresses the shortcomings of the personal
       fabrication revolution described in Section \ref{sec:broken-promises}:
       \red{lack of things to fabricate using plastic}, and the necessity of
-      domain knowledge to fabricate interesting things. Because the techniques
+      domain knowledge to fabricate interesting things. The techniques
       presented in this thesis do not require special materials, or printers;
       increasing the vocabulary of what can be constructed using simple
       plastics. Additionally, because these techniques also do not require any
@@ -174,29 +176,15 @@
       devices, this increases the target audience that can make use of these
       techniques.
 
+      \newpage
       \subsubsection*{Contributions of this Thesis}
         This thesis focuses on the easy construction of interactive devices
         without requiring significant post-fabrication activities (e.g.,
-        assembly of parts, circuits, calibration of machine learning models).
-        With this work, I enable the creation of devices in all the sections of
-        the interaction stack (Figure \ref{fig:stack}): devices that can sense,
-        process, and provide output to user's interactions.
-
-        An overarching theme of my work is \emph{air}. All of the work presented
-        in this thesis is powered by air, being from a constant, pressurized air
-        source (Chapters \ref{ch:airtouch}, \ref{ch:morphees}, and
-        \ref{ch:airlogic}), or from the user's lungs (Chapter
-        \ref{ch:blowhole}). The use of air as a \red{medium} to enable the
-        construction of interactive devices was motivated by two factors. First,
-        air behaviors have been extensively explored in physics, which gives
-        us a ample understanding how air behaves in a variety of situations, and
-        which ones of these lend themselves to digital fabrication pipelines.
-        Allowing us then to use these concepts to construct pre-trained machine
-        learning models, or use their respective mathematical equations. Second,
-        I can then embed internal structures inside three-dimensional models
-        that leverage these behaviors without greatly modifying the object's
-        external geometry. A summary of the individual contributions of each
-        effort is presented below:
+        assembly of parts, circuits, calibration of machine learning models), or
+        specialized fabrication pipelines.  With my work, I enable the creation
+        of devices in all the sections of the interaction stack (Figure
+        \ref{fig:stack}): devices that can sense, process, and provide output to
+        user's interactions.
 
         \begin{figure}[h]
           \centering
@@ -204,6 +192,22 @@
           \label{fig:stack}
           \caption{Input - Processing - Output}
         \end{figure}
+        
+        An overarching theme of this work is \emph{air}. All of the work
+        presented in this thesis is powered by air, being from a constant,
+        pressurized air source (Chapters \ref{ch:airtouch}, \ref{ch:morphees},
+        and \ref{ch:airlogic}), or from the user's lungs (Chapter
+        \ref{ch:blowhole}). The use of air as a \red{medium} to enable the
+        construction of interactive devices was motivated by two factors. First,
+        air and fluid behaviors have been extensively explored in physics, which
+        gives us a ample understanding how air behaves in a variety of
+        situations, and which ones of these lend themselves to digital
+        fabrication pipelines.  Allowing us then to use these concepts to
+        construct pre-trained machine learning models, or use their respective
+        mathematical equations. Second, I can then embed internal structures
+        inside three-dimensional models that leverage these behaviors without
+        greatly modifying the object's external geometry. A summary of the
+        individual contributions of each effort is presented below:
 
         \textsc{\at} extends the possibilities of pneumatic sensing on
         fabricated objects by enabling sensing users interactions not only on
@@ -211,21 +215,22 @@
         principles of fluid dynamics that relate pressure to discharge area:
         when there is a change in the discharge area of a system, the pressure
         will vary in return. Objects augmented with \emph{\at} can sense touch
-        interactions in up to 12 individual locations. These objects are
-        fabricated as a single structure without requiring any assembly of parts
-        or circuits. Additionally, they make use of pre-trained machine learning
-        models, so no per-object or per-user calibration is necessary.
+        interactions in up to 12 individual locations, and are printed as a
+        single structure. These objects are fabricated as a single structure
+        without requiring any assembly of parts or circuits. Additionally, they
+        make use of pre-trained machine learning models, so no per-object or
+        per-user calibration is necessary.
         
         \textsc{\bh} continues to explore techniques for enabling sensing of
         user's interactions on 3D-printed objects by addressing one of
         \emph{\at's} principals shortcomings: the need for a constant air source
-        and pressure sensors. Based on the principle of acoustic resonance,
-        \emph{\bh} embeds resonant cavities in the interior of the model that,
-        when gently blown on, emit an identifiable sound. Interactive devices
-        constructed using \emph{\bh} are fabricated as a single structure using
-        commercially-available printers and materials, and make use of a
-        mathematical model to identify blow locations based on the frequency of
-        the generated sound.
+        and barometric pressure sensors. Based on the principle of acoustic
+        resonance, \emph{\bh} embeds resonant cavities in the interior of the
+        model that, when gently blown on, emit an identifiable sound.
+        Interactive devices constructed using \emph{\bh} are fabricated as a
+        single structure using commercially-available printers and materials,
+        and make use of a mathematical model to identify blow locations based on
+        the frequency of the generated sound.
 
         Switching gears to computing, \textsc{AirLogic} aims to answer the
         question ``how can we 3D-print devices that can think?'' Inspired by
