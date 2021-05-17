@@ -1,0 +1,144 @@
+\chapter{Fabrication of Interactive Objects} \label{ch:background}
+  The construction of interactive objects using digital fabrication equipment
+  has been a popular topic in the HCI literature in recent years. Researchers
+  have proposed a variety of techniques for constructing objects that can sense,
+  provide output to, and process user's interactions. Ballagas \etal present a
+  comprehensive review of this design space~\cite{Ballagas:2018}, grouping
+  previous endeavors by the type of mechanisms used to 3D-print interactive
+  objects. This chapter, in contrast, aims to identify how previous work is
+  trending towards the \pap ideal described in this thesis.
+
+  \section{\papf Literature Review}
+    For a printed device to be truly interactive, it must perform three main
+    tasks: sense how users are interacting with it, perform some computation
+    with these interactions, and present the result of these computations as
+    some form of output. The structure of this section reflects these tasks.
+
+    \subsection{Sensing User's Interactions} \label{sec:sensing}
+      A variety of efforts have explored how to construct devices that can sense
+      user's interactions using 3D-printers. Some early research on prototyping
+      interactive objects focused on adding interactive functionality to the
+      objects rather than on simple methods for fabrication. For example, some
+      systems require assembling electronics and other components inside a
+      printed shell \cite{Savage:2015ws, Savage:2013, Murray-Smith:2008,
+      Hook:2014kp} and others require casting silicone \cite{He:2017, Rod:2017}.
+
+      Other approaches require less assembly. Some research has detected changes
+      in acoustical signals caused by user manipulation of geometry
+      \cite{Savage:2015, Laput:2015, Li:2016}; however, the requirement for
+      complex or movable geometry can mean considerable post-print effort for
+      cleaning, assembling, and gluing.
+
+      Some recent work has come much closer to the \pap ideal, enabling
+      interactivity with significantly less or no post-print manipulation. One
+      approach is to use multi-material printers to enable capacitive touch
+      sensing \cite{Schmitz:2015, Schmitz:2019, Gotzelmann:2016} or optical
+      sensing \cite{Willis:2012}; however, these approaches require attachment
+      of multiple points of circuitry or optic sensors to operate, and the size
+      of object is limited. Another optical approach is to use computer vision
+      to detect user interaction \cite{Shi:2016a}; however, cameras are prone to
+      problems with occlusion (i.e., touches on the back of an object cannot be
+      detected, nor can touches hidden by the hand itself), and it is difficult
+      to differentiate touching from merely being close to the object.
+
+      Several projects require nearly no post-print manipulation.
+      Touch~\&~Activate \cite{Ono:2013} used an affixed microphone and speaker
+      to detect how acoustic sweeps were changed by user touch; this technique
+      worked with many objects, including off-the-shelf ones, but required a new
+      machine-learning model to be trained for every object.  Tickers and Talker
+      \cite{Shi:2016} used centimeter-scale physical markers which made unique
+      sounds when plucked, but significantly impact the geometry of the object.
+      INTACT \cite{Hudin:2016} uses a 3D~model of an object placed on a 6-axis
+      force sensor to mathematically determine where the user is touching. While
+      it can sense touch with high precision, objects are limited in size to
+      around 20\,cm, and require recalibration after moving.
+
+    \subsection{Computing} \label{sec:computing}
+      Previous approaches for digitally fabricating interactive objects
+      have often used existing computing devices (e.g., computers,
+      phones) connected to the fabricated objects in order to drive the
+      interactions. Researchers have explored the use of
+      acoustic~\cite{Savage:2015, Tejada:2018, Shi:2016},
+      pneumatic~\cite{Tejada:2020, Vazquez:2015, Ou:2016},
+      electronic~\cite{Schmitz:2019, Savage:2014,Schmitz:2015}, and
+      optic~\cite{Willis:2012, Savage:2013} techniques to fabricate
+      objects that can respond to user's interactions. While the
+      computation required to drive most of these approaches could
+      theoretically be implemented using smaller computing devices and
+      embedded inside the final 3D-printed object, this would require
+      significant engineering expertise from the designer to assemble
+      circuits or printed parts.
+
+      Other approaches ``store'' the results of the interactions for
+      later processing. For example, in Off-line Sensing, Schmitz \etal
+      introduce an approach to develop one-time 3D-printed sensors using
+      liquids to memorize the results of interactions. These sensors can
+      then be read using a smartphone~\cite{Schmitz:2018}. Similarly,
+      Iyer \etal developed 3D-printable structures capable of storing
+      linear, and rotational interactions using a coil-like structure.
+      These devices can transmit the stored interactions wirelessly once
+      in range~\cite{Iyer:2018}. While successful, these efforts require
+      manual intervention during deployment. They require designers to
+      assemble multiple 3D-printed parts~\cite{Iyer:2018}, or carefully
+      pour liquid into the constructed objects~\cite{Schmitz:2018}.
+
+      Last, are the endeavors that embed computation inside the constructed
+      object. While this has been traditionally achieved by assembling custom
+      electronics and other components inside a 3D-printed
+      shell~\cite{Murray-Smith:2008}, other efforts aim to simplify this process
+      by leveraging existing computing devices and embed them inside the
+      fabricated object. Acoustruments, for example, makes use of a smartphone
+      embedded inside the object to enable rich input
+      modalities~\cite{Laput:2015}. Pineal builds on this concept and makes use
+      of smartwatches in addition to smartphones in order to augment objects of
+      various dimensions while also providing rich output to the
+      user~\cite{Ledo:2017}. Other endeavors make use of mechanical computing to
+      augment digitally fabricated objects with simple logic processing. Ion
+      \etal developed logic cells that can be embedded inside 3D-printed
+      objects, enabling them to compute simple logic operations~\cite{Ion:2017},
+      while Song \etal devised a technique for manufacturing micro-mechanical
+      logic gates using digital fabrication equipment~\cite{Song:2019}. Despite
+      their success, these approaches share a common limitation: they rely on
+      complex or lengthy assembly processes in order to be realized.
+
+    \subsection{Providing Output} \label{sec:output}
+      \red{Still reading.}
+
+  \section{Discussions \& Observations}
+    % Maybe add some of Schmitz' stuff from CHI '21 here
+    Despite the significant strides previous work has made towards the \papf
+    ideal, there still remains work to do. Section \ref{sec:sensing} shows how
+    previous work has progressed from requiring complex assemblies and
+    fabrication pipelines to enable sensing user's interactions on fabricated
+    objects, to almost seamless approaches that require very little intervention
+    post-fabrication. However, despite these progresses, there most streamlined
+    processes for constructing objects that can sense user's interactions still
+    present significant friction. For example, efforts like
+    Touch~\&~Activate~\cite{}, and Tickers and Talkers~\cite{}, while not
+    requiring any complex assemblies or prohivitive fabrication pipelines, they
+    require per-object calibration of machine learning models--a task arguably
+    more complex for non-expert users. 
+    % An interesting approach is the cool UIST paper that makes the printer assemble and do stuff.
+
+    In contrast to sensing, efforts that enable computation in 3D-printed
+    objects are far from the \papf ideal. While there are efforts like
+    Pineal~\cite{Ledo:2017} that aim to streamline the process by embedding an
+    existing device inside a fabricated object, and providing guidelines on how
+    to do so, this effort still requires significant intervention from the
+    designer to assemble parts after the fabrication process is completed.
+
+    Last are the interactive objects that can present the result of computations
+    as physical output. Similarly to objects that can process user's
+    interactions, this category of objects is underexplored in the HCI
+    literature. In their review~\cite{Ballagas:2018}, Ballagas \etal identified
+    29 efforts that construct interactive objects that can present some form of
+    output to their users, in contrast to the 79 that can sense user's
+    interactions.  Additionally to this \red{unexploredness}, these efforts
+    stray far from the \papf ideal, requiring assembly of parts~\cite{}, and
+    electronics~\cite{}.
+
+    In summary, we can see a trend in the related literature for fabricating
+    interactive objects towards the \papf ideal, which highlights its
+    importance. Despite these strides, however, there is still work to do. This
+    thesis presents for approaches that brings us closer to this potential
+    future where 3D-printed devices are immediately usable after printing.
