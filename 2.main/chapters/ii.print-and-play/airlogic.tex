@@ -610,10 +610,10 @@
     single-material printers. While this allow us to reach a broader
     audience, it came at the cost of very minimal assembly of moving parts.
     Multi-material printers can construct \al objects as a single structure
-    by embedding dissolvable, breakable or \red{other support type here}
-    support materials, however \al objects constructed with single material
-    printers must have their widgets with moving parts (e.g., buttons,
-    sliders, vibration motors) printed separately and manually assembled.
+    by embedding dissolvable, or breakable support materials, however \al
+    objects constructed with single material printers must have their widgets
+    with moving parts (e.g., buttons, sliders, vibration motors) printed
+    separately and manually assembled.
 
     We constructed an experimental setup to test our \al prototype designs.
     This setup was comprised of JunAir 2000-40PD air compressor, and Festo
@@ -667,13 +667,12 @@
           \label{fig:operating-ranges}
         \end{figure}
 
-        In addition, we found that, in average, our logic widgets lose
-        \red{111} kPa of pressure when processing their respective
-        operations, while our input widgets designs present a pressure loss
-        of \red{444} kPa. We did not evaluate the pressure losses of our
-        output widgets, as they are intended to be the last element in our
-        \red{circuits}. A detailed view of our results can be found in
-        Figure \ref{fig:pressure-losses}.
+        In addition, we found that, in average, our logic widgets lose half of
+        the input pressure when processing their respective operations, while
+        our input widgets designs present a neglible pressure loss. We did not
+        evaluate the pressure losses of our output widgets, as they are intended
+        to be the last element in our designs. A detailed view of our results
+        can be found in Figure \ref{fig:pressure-losses}.
 
         \begin{figure}
           \centering
@@ -681,8 +680,6 @@
           \caption{Pressure losses}
           \label{fig:pressure-losses}
         \end{figure}
-
-        % What does these results mean?
 
     % Expand descriptions
     \subsection{Example Applications}
@@ -750,15 +747,15 @@
         \end{figure}
 
   \section{Discussion \& Limitations}
-    \subsection{Scalability}
-      Our characterization efforts for our widgets uncovered the
-      operating barometric pressure range, and intrinsic pressure losses in
-      our designs. Using these values as reference, given a constant air
-      source of \red{999} kPa~\footnote{For reference, human lungs can
-      pressurize up to \red{12.4} kPa.}, we can connect up to \red{9}
-      widgets in series to create an \al object.
+    % \subsection{Scalability}
+    %   Our characterization efforts for our widgets uncovered the
+    %   operating barometric pressure range, and intrinsic pressure losses in
+    %   our designs. Using these values as reference, given a constant air
+    %   source of \red{999} kPa~\footnote{For reference, human lungs can
+    %   pressurize up to 12.4 kPa.}, we can connect up to \red{9}
+    %   widgets in series to create an \al object.
 
-      \subsubsection{Chaining logic widgets}
+      \subsection{Chaining logic widgets}
         While our applications illustrate the capacity of using multiple
         logic widgets in an \al object (see Figure \ref{sec:pitch} and
         Section \ref{sec:puzzle}), this functionality is limited in our current
@@ -785,16 +782,16 @@
         inputs are used to actuate them. To achieve this, we will explore
         two avenues. First we will research the use of active fluidic
         designs to construct our logic widgets. Our current designs are
-        based on passive fluidic logic devices, where the \red{some
-        description of passive devices}. Using active designs, which
-        contain a continuous air jet inputs interact with, will mean that
-        the output barometric pressure for our widgets is always the same:
-        that of the power air jet. This can allow \red{something}. Second,
-        we will explore the use of fluidic
-        amplifiers~\cite{CharlesBelsterling:1971}. These structures
-        \red{how they behave}.
+        based on passive fluidic logic devices, where the the operation is
+        performed using flow coming from the inputs. Using active designs, which
+        contain a continuous air jet inputs interact with, will mean that the
+        output barometric pressure for our widgets is always the same: that of
+        the power air jet. Second, we will explore the use of fluidic
+        amplifiers~\cite{CharlesBelsterling:1971}.  These structures increase
+        the velocity of an incomming jet of air by switching an existing,
+        constant jet from one outlet to another.
         
-      \subsubsection{Exploring different fabrication methods.} 
+      \subsection{Exploring different fabrication methods.} 
         During our explorations we constructed our widgets using both FDM
         and SLA printers. Interestingly, despite their higher resolution of
         25 microns, widgets fabricated using SLA printers performed worse
@@ -819,7 +816,7 @@
         stencils and assembly guides for \al designs fabricated on such
         machinery.
         
-      \subsubsection{Comparison with electronics}
+      \subsection{Comparison with electronics}
         Despite the potential interactions that \al enables designers to
         embed into 3D-printed objects, it falls short of what can be
         enabled using off-the-shelf electronic toolkits such as
@@ -845,7 +842,7 @@
         reminder that is triggered when going for the door, and it is
         raining.
 
-      \subsubsection{Other air sources}
+      \subsection{Other air sources}
         All interactive devices require a power source to operate. In the
         case of electronic devices is electricity, and for \al devices is
         air. The main issue with \al objects is that, while electricity can
