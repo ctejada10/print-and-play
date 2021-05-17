@@ -15,12 +15,13 @@
     some form of output. The structure of this section reflects these tasks.
 
     \subsection{Sensing User's Interactions} \label{sec:sensing}
-      Some early research on prototyping interactive objects focused on adding
-      interactive functionality to the objects rather than on simple methods for
-      fabrication. For example, some systems require assembling electronics and
-      other components inside a printed shell \cite{Savage:2015ws, Savage:2013,
-      Murray-Smith:2008, Hook:2014kp} and others require casting silicone
-      \cite{He:2017, Rod:2017}.
+      A variety of efforts have explored how to construct devices that can sense
+      user's interactions using 3D-printers. Some early research on prototyping
+      interactive objects focused on adding interactive functionality to the
+      objects rather than on simple methods for fabrication. For example, some
+      systems require assembling electronics and other components inside a
+      printed shell \cite{Savage:2015ws, Savage:2013, Murray-Smith:2008,
+      Hook:2014kp} and others require casting silicone \cite{He:2017, Rod:2017}.
 
       Other approaches require less assembly. Some research has detected changes
       in acoustical signals caused by user manipulation of geometry
@@ -81,28 +82,27 @@
       assemble multiple 3D-printed parts~\cite{Iyer:2018}, or carefully
       pour liquid into the constructed objects~\cite{Schmitz:2018}.
 
-      More related to \al are efforts that embed computation inside the
-      fabricated object. While this has been traditionally achieved by
-      assembling custom electronics and other components inside a
-      3D-printed shell~\cite{Murray-Smith:2008}, other efforts aim to
-      simplify this process by leveraging existing computing devices and
-      embed them inside the fabricated object. Acoustruments, for
-      example, makes use of a smartphone embedded inside the object to
-      enable rich input modalities~\cite{Laput:2015}. Pineal builds on
-      this concept and makes use of smartwatches in addition to
-      smartphones in order to augment objects of various dimensions while
-      also providing rich output to the user~\cite{Ledo:2017}. Other
-      endeavors make use of mechanical computing to augment digitally
-      fabricated objects with simple logic processing. Ion \etal
-      developed logic cells that can be embedded inside 3D-printed
-      objects, enabling them to compute simple logic
-      operations~\cite{Ion:2017}, while Song \etal devised a technique
-      for manufacturing micro-mechanical logic gates using digital
-      fabrication equipment~\cite{Song:2019}. Despite their success,
-      these approaches share a common limitation: they rely on complex or
-      lengthy assembly processes in order to be realized.
+      Last, are the endeavors that embed computation inside the constructed
+      object. While this has been traditionally achieved by assembling custom
+      electronics and other components inside a 3D-printed
+      shell~\cite{Murray-Smith:2008}, other efforts aim to simplify this process
+      by leveraging existing computing devices and embed them inside the
+      fabricated object. Acoustruments, for example, makes use of a smartphone
+      embedded inside the object to enable rich input
+      modalities~\cite{Laput:2015}. Pineal builds on this concept and makes use
+      of smartwatches in addition to smartphones in order to augment objects of
+      various dimensions while also providing rich output to the
+      user~\cite{Ledo:2017}. Other endeavors make use of mechanical computing to
+      augment digitally fabricated objects with simple logic processing. Ion
+      \etal developed logic cells that can be embedded inside 3D-printed
+      objects, enabling them to compute simple logic operations~\cite{Ion:2017},
+      while Song \etal devised a technique for manufacturing micro-mechanical
+      logic gates using digital fabrication equipment~\cite{Song:2019}. Despite
+      their success, these approaches share a common limitation: they rely on
+      complex or lengthy assembly processes in order to be realized.
 
     \subsection{Providing Output} \label{sec:output}
+      \red{Still reading.}
 
   \section{Discussions \& Observations}
     % Maybe add some of Schmitz' stuff from CHI '21 here
@@ -117,8 +117,8 @@
     Touch~\&~Activate~\cite{}, and Tickers and Talkers~\cite{}, while not
     requiring any complex assemblies or prohivitive fabrication pipelines, they
     require per-object calibration of machine learning models--a task arguably
-    more complex for non-expert users. An interesting approach is the cool UIST
-    paper that makes the printer assemble and do stuff.
+    more complex for non-expert users. 
+    % An interesting approach is the cool UIST paper that makes the printer assemble and do stuff.
 
     In contrast to sensing, efforts that enable computation in 3D-printed
     objects are far from the \papf ideal. While there are efforts like
@@ -126,9 +126,6 @@
     existing device inside a fabricated object, and providing guidelines on how
     to do so, this effort still requires significant intervention from the
     designer to assemble parts after the fabrication process is completed.
-    \red{Say something about the ones that transfer the info wirelessly and save
-    them. An ideal might be off-line sensing, but it requires of a phone to
-    operate, making it suboptimal.}
 
     Last are the interactive objects that can present the result of computations
     as physical output. Similarly to objects that can process user's
