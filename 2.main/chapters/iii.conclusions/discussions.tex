@@ -13,7 +13,8 @@
     equipment should abstract most, if not all, of these complications and
     enable designers to fabricate tangible, interactive devices that are
     immediately usable after construction. This ideal \red{scenario} is what I
-    call ``\papf''.
+    call ``\papf'': a fabrication paradigm where tangible, interactive devices
+    are printed instead of assembled.
 
     In this thesis, I have presented four \pap techniques---\al, \bh, \al,
     \mp---each aimed to address specific barriers in the \red{interaction
@@ -34,21 +35,24 @@
     designers, or provide a programming-by-example environment where designers
     can link specific locations in the model, to actions.
 
-    In addition to contributing to the digital fabrication \red{field}, the I
-    present in this thesis builds on the larger trend in computer science,
+    In addition to contributing to the digital fabrication \red{field}, the work
+    I present in this thesis builds on the larger trend in computer science,
     specifically Human-Computer Interaction, where computing devices are imbued
     with domain expertise to support users. Although previous explorations of
     this concept in a digital fabrication setting have been aimed at preserving
     user creativity and agency~\cite{Zoran:2013}, the work discussed above aims
     to abstract the complexity of creating tangible devices into the fabrication
-    process using 3D printers. As more efforts continue to explore ways of
-    \red{something}.
+    process using 3D printers. By removing the complexities of constructing
+    tangible, interactive devices and instead abstracting them into the
+    fabrication pipelines, we can enable non-expert designers and hobbyists to
+    create on-demand tangible devices without requiring extensive domain
+    expertise, making the fabrication revolution ideal closer to reality.
 
     A potential \red{breakthrough} that might change the performance of the
-    projects discussed above is the advent of new fabrication devices, or the
-    increased accessibility of current ones.  While some of the barriers that
-    previous endeavors face may be overcome by improvements in digital
-    fabrication equipment (e.g., complex support material
+    projects discussed above is the advent of new fabrication machines, or the
+    increased accessibility of higher-end, current ones. While some of the
+    barriers that previous endeavors face may be overcome by improvements in
+    digital fabrication equipment (e.g., complex support material
     removal~\cite{Laput:2015}, or manual fabrication procedures~\cite{He:2017}),
     others efforts present intrinsic barriers in the way they enable the
     construction of tangible, interactive devices. For example, in
@@ -86,9 +90,10 @@
     itself.
 
   \section{Directions for Future Work}
-    Throughout this thesis, I have laid out possible improvements in a
-    per-project basis. Moving from per-project improvements, this section aims
-    to discuss how \papf can be improved by future explorations.
+    Throughout this thesis, I have laid out possible directions future
+    researchers can improve each project. Moving from per-project improvements,
+    this section aims to discuss how \papf can be improved by future
+    explorations.
 
     \subsection{Support for multi-material printing}
       Throughout the projects that make up this thesis, I have made a conscious
@@ -106,14 +111,12 @@
 
       In addition to using conductive and nonconductive material to construct
       tangible devices, future work can explore the use of metamaterials to
-      create new composite materials, tailored for specific functions. For
+      create new composite materials, tailored for specific functions.  The use
+      of multi-material fabrication pipelines has the potential for enriching
+      the vocabulary of interaction modalities, while still remaining \pap.  For
       example, the use of \red{compressible} metamaterials can enable a variety
-      of haptic feedback when interacting with the tangible device.
-
-      % This is bad
-      The use of multi-material fabrication pipelines has the potential for
-      enriching the vocabulary of interaction modalities, while still remaining
-      \pap.
+      of haptic feedback when interacting with the printed device, while
+      \red{some other example here}.
 
     \subsection{Support for other interaction modalities}
       The work discussed above focuses on demonstrating the possibilities of
@@ -154,20 +157,36 @@
       output, like temperature. Similarly, \al presents acoustic feedback to its
       users using whistles. Future work can explore \pap ways to construct
       speakers, similar to those presented in \cite{Ishiguro:2014}, and provide
-      richer acoustic output.
+      richer acoustic output. Continuing, while with \al and \mp I explored
+      different ways to provide visual output to users, future work can explore
+      more intricate ways to visualize output using LEDs or \red{something else.}
 
-      % Seems incomplete
       Last, an interesting avenue to explore is the construction of tangible
       devices that not only respond to user's interactions, but to changes in
       the environment they sit in. The inclusion of ``smart'' materials can aid
       in the creation of such devices. The use of materials which properties
       change depending on their environment can enable the easy construction of
-      ``tangible sensors''.
-    
+      ``tangible sensors''. These sensors can respond to environmental
+      temperature, humidity, or sound, and act accordingly (e.g., a smart
+      sunglass case that opens when it is bright out).
+
     \subsection{Support for other fabrication equipment}
-      The work presented on this thesis is focused on techniques for creating
-      tangible, interactive devices using 3D printers. 
-        - Why did I chose 3D printers?
-        - 3D printers are not the only fab device
-        - For more experts?
-        - Printed factory
+      In this thesis I have presented four \pap ways to construct tangible,
+      interactive devices using 3D printers. This does not mean, however, that
+      \pap devices can only be fabricated using 3D printers. The main benefit of
+      using 3D printers instead of other fabrication devices is their capability
+      for constructing three-dimensional shapes without the need user
+      intervention; whereas using other fabrication devices require manual
+      assembly post-fabrication. A possible research avenue to construct
+      tangible devices using laser cutters and CNC routers is to not only use
+      these devices for the fabrication of the object, but for the assembly
+      tasks as well. 
+
+      Early explorations of this concept have resulted in promising
+      results~\cite{Katakura:2019, Nisser:2021}, however, they are still far
+      from being \pap. For example, \cite{Katakura:2019} only enables the
+      construction of mechanically interactive objects: objects that can be
+      moved but don't sense how they're being used. And \cite{Nisser:2021} still
+      requires the designer to be versed in the selection of electronics, and
+      how to connect them. Future work expanding this concept should do
+      \red{something else.}
