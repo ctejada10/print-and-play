@@ -5,14 +5,21 @@
   provide output to, and process user's interactions. Ballagas \etal present a
   comprehensive review of this design space~\cite{Ballagas:2018}, grouping
   previous endeavors by the type of mechanisms used to 3D-print interactive
-  objects. This chapter, in contrast, aims to identify how previous work is
-  trending towards the \pap ideal described in this thesis.
+  objects. This chapter, in contrast, aims to identify how this literature is
+  progressing towards the \papf ideal.
 
   \section{\papf Literature Review}
-    For a printed device to be truly interactive, it must perform three main
-    tasks: sense how users are interacting with it, perform some computation
-    with these interactions, and present the result of these computations as
-    some form of output. The structure of this section reflects these tasks.
+    The process of interacting with a device, tangible or screen based, is
+    comprised of three main steps. First, the device sense how it is being
+    interacted with (e.g., mouse clicks, touch-sensitive screen). Continuing,
+    the device processes the provided interaction input. Last, the device
+    provides an output to the user (e.g., visualizing on screen, change of
+    physical shape). Mirroring this process, the structure of this section is
+    divided into three main parts. First, we explore the literature relevant for
+    constructing tangible devices that can sense user's interactions. Second, we
+    review previous work that has tackled embedding processing capabilities to
+    tangible devices. Last, we highlight endeavors that construct devices for
+    output display.
 
     \subsection{Sensing User's Interactions} \label{sec:sensing}
       A variety of efforts have explored how to construct devices that can sense
@@ -42,7 +49,7 @@
       to differentiate touching from merely being close to the object.
 
       Several projects require nearly no post-print manipulation.
-      Touch~\&~Activate \cite{Ono:2013} used an affixed microphone and speaker
+      Touch \&~Activate \cite{Ono:2013} used an affixed microphone and speaker
       to detect how acoustic sweeps were changed by user touch; this technique
       worked with many objects, including off-the-shelf ones, but required a new
       machine-learning model to be trained for every object.  Tickers and Talker
@@ -117,38 +124,51 @@
       machine learning models.
 
   \section{Discussions \& Observations}
-    Despite the significant strides previous work has made towards the \papf
-    ideal, there still remains work to do. Section \ref{sec:sensing} shows how
-    previous work has progressed from requiring complex assemblies and
-    fabrication pipelines to enable sensing user's interactions on fabricated
-    objects, to almost seamless approaches that require very little intervention
-    post-fabrication. However, despite these progresses, there most streamlined
-    processes for constructing objects that can sense user's interactions still
-    present significant friction. For example, efforts like
-    Touch~\&~Activate~\cite{}, and Tickers and Talkers~\cite{}, while not
-    requiring any complex assemblies or prohivitive fabrication pipelines, they
-    require per-object calibration of machine learning models--a task arguably
-    more complex for non-expert users. 
+    Despite the strides made by previous explorations on streamlining the
+    construction of tangible devices, the literature nonetheless strays from the
+    \papf ideal. This section discusses the advances made by previous work
+    through the lens of \papf.
 
-    In contrast to sensing, efforts that enable computation in 3D-printed
-    objects are far from the \papf ideal. While there are efforts like
-    Pineal~\cite{Ledo:2017} that aim to streamline the process by embedding an
-    existing device inside a fabricated object, and providing guidelines on how
-    to do so, this effort still requires significant intervention from the
-    designer to assemble parts after the fabrication process is completed.
+    Section \ref{sec:sensing} shows how previous work has progressed from
+    requiring complex assemblies and fabrication pipelines to enable sensing
+    user's interactions on fabricated objects, to almost seamless approaches
+    that require very little intervention post-fabrication. However, despite
+    these progresses, there most streamlined processes for constructing objects
+    that can sense user's interactions still present significant friction. For
+    example, efforts like Touch~\&~Activate~\cite{Ono:2013}, and Tickers and
+    Talkers~\cite{Shi:2016}, while not requiring any complex assemblies or
+    prohivitive fabrication pipelines, they require per-object calibration of
+    machine learning models--a task arguably more complex for non-expert users. 
 
-    Last are the interactive objects that can present the result of computations
-    as physical output. Similarly to objects that can process user's
-    interactions, this category of objects is underexplored in the HCI
-    literature in relation to sensing. In their review~\cite{Ballagas:2018},
-    Ballagas \etal identified 18 efforts that construct interactive objects that
-    can present some form of output to their users, in contrast to the 79 that
-    can sense user's interactions. Additionally to this \red{unexploredness},
-    these efforts stray far from the \papf ideal, requiring assembly of
-    parts~\cite{}, and electronics~\cite{}.
+    Contrary to techniques that enable sensing of interactions on tangible
+    devices, efforts that enable computation in 3D-printed objects diverge
+    significantly from the \papf ideal. Efforts that aim to mechanically embed
+    computation into tangible devices, such as \cite{Ion:2017}, require lengthy
+    assemblies of numerous printed parts, while endeavors that ``store'' the
+    results of interactions require the careful pouring of liquids into
+    constructed objects~\cite{Schmitz:2018}, both tasks demanding significant
+    domain knowledge from the designer. The technique that approaches closer to
+    the \papf ideal is Pineal~\cite{Ledo:2017}. While requiring manual assembly
+    post-print, this technique provides designers guidelines to designers how to
+    assemble the printed parts and mobile devices---an interesting way of
+    decreasing the complexity for constructing tangible devices.
+    
+    Last are the techniques that construct tangible devices capable of
+    displaying the output of computations to their users. When compared to
+    sensing approaches, techniques that construct tangible devices for
+    displaying the output of computations to their users remains unexplored. In
+    their review~\cite{Ballagas:2018}, Ballagas \etal identified only 18 such
+    efforts, compared to the 79 that enable the construction of tangible devices
+    to sense user's interactions. The techniques explored, however, stray the
+    farthest from the \papf ideal, requiring lengthy assembly of
+    parts~\cite{Ion:2017, Willis:2012}, and electronics~\cite{Murray-Smith:2008}.
 
-    In summary, we can see a trend in the related literature for fabricating
-    interactive objects towards the \papf ideal, which highlights its
-    importance. Despite these strides, however, there is still work to do. This
-    thesis presents for approaches that brings us closer to this potential
-    future where 3D-printed devices are immediately usable after printing.
+    In closing, the literature exploring the construction of tangible devices
+    using 3D printers trends towards the \papf deal, forgoing elaborate
+    assemblies for a more accessible construction process. This accentuates the
+    importance of \papf. Despite the literature trending towards more
+    \pap-friendly techniques, the literature does does not yet provide a
+    technique that fulfills the requirements for \papf, previously discussed.
+    This thesis introduces four distinct approaches for constructing immediately
+    usable tangible devices. These techniques aim to inch closer to the ideal
+    future of on-demand fabrication of tangible devices.
