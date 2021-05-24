@@ -6,37 +6,52 @@
 	\let\cleardoublepage\relax
 
 	\chapter*{Abstract}
-		In recent years, it has become increasingly \red{easy} to create interactive
+		In recent years, it has become increasingly accessible to create interactive
 		applications on screen-based devices. Contrary to this ease, and despite
 		their numerous benefits, creating tangible interactive devices is a tasks
-		reserved for experts, requiring extensive knowledge on electronics. \red{A
-		promising solution are digital fabrication technologies, but significant
-		barriers still stand between non-experts, and other-domain experts when
-		constructing tangible devices.} 
+		reserved for experts, requiring extensive knowledge on electronics, and
+		manual assemblies. While digital fabrication equipment holds promise to
+		alleviate this situation, the majority of research exploring this avenue
+		still present significant barriers for non-experts, and other-domain experts
+		to construct tangible devices, often requiring assembly of electronic
+		circuits and printed parts, prohibitive fabrication pipelines, or intricate
+		calibration of machine learning models.
 
-		This thesis introduces \emph{\papf}: a fabrication paradigm where tangible
-		interactive devices are printed, rather than assembled. By embedding
-		interior structures inside three-dimensional models that leverage distinct
-		properties of fluid behavior, this thesis presents a variety of techniques
-		to construct tangible devices that can sense, process, and respond to user's
-		interactions without requiring assembly of parts, circuits, or calibration
-		of machine learning models.
+		This thesis introduces \emph{\papf}: a digital fabrication paradigm where
+		tangible interactive devices are printed, rather than assembled. By
+		embedding interior structures inside three-dimensional models that leverage
+		distinct properties of fluid behavior, this thesis presents a variety of
+		techniques to construct tangible devices that can sense, process, and
+		respond to user's interactions without requiring assembly of parts,
+		circuits, or calibration of machine learning models.
 
-		% Maybe expand each paper
+		Chapter \ref{ch:background} provides an overview of the fabrication of
+		tangible devices literature through the lens of \papf. This chapter
+		highlights the post-print activities required to enable each of the efforts
+		in the literature, and reflects on the status of the field.
+
 		Chapters \ref{ch:airtouch} and \ref{ch:blowhole} introduce two novel
 		techniques for constructing tangible devices that can sense user's
 		interactions. \at uses basic principles of fluid behavior to enable the
-		construction of touch-sensing devices, whereas \bh employs principles of
-		acoustic resonance to identify where objects are being gently blown on.
+		construction of touch-sensing devices, capable of detecting interactions in
+		up to 12 locations, with an accuracy of up to 98\%. \bh builds on this
+		concept by employing principles of acoustic resonance to construct tangible
+		devices that can detect where are gently blown on. \bh-enabled devices can
+		enable up to seven interactive locations, with an accuracy of up to 98\%.
 
 		Conversely, in Chapter \ref{ch:airlogic} I introduce a technique to
 		encapsulate logic computation into 3D-printed objects. Inspired by concepts
 		from the Cold War, I embed structures capable of representing basic logic
-		operations using interacting jets of air into three-dimensional models.
+		operations using interacting jets of air into three-dimensional models. \al
+		takes the form of a toolkit, enabling non-expert designers to add a variety
+		of input mechanisms, logic operations, and output displays.
 
 		Continuing, Chapter \ref{ch:morphees} describes a toolkit for fabricating
 		objects capable of changing their physical shape using pneumatic actuation.
-		\mp introduces a set of widgets,
+		\mp introduces a design environment, a set of pneumatically actuated
+		widgets, and a control module that, in tandem, enable non-experts to
+		construct devices capable of changing their physical shape in order to
+		provide output.
 
 		Last, I conclude with reflections on the status of \papf, and possible
 		directions for future work.
