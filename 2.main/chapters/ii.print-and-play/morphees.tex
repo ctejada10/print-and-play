@@ -116,24 +116,23 @@
     \cite{Kim:2008}. The current design space of SCIs covers a
     wide range of features \cite{10.1145/3173574.3174193}, including variable
     length \cite{Follmer:2013}, volume
-    \cite{10.1145/1357054.1357090}, curvature \cite{Yao:2013}, and porosity
-    \cite{10.1145/1517664.1517671}. The literature has featured numerous
-    prototype systems exploring a huge variety of shapes, shape-changes,
-    interactions, implementation techniques, and applications. 
+    \cite{Kim:2008}, curvature \cite{Yao:2013}, and porosity
+    \cite{Coelho:2009}. The literature has featured numerous prototype systems
+    exploring a huge variety of shapes, shape-changes, interactions,
+    implementation techniques, and applications. 
     
     Despite the potential of SCIs to enhance the development of the
     next generation of interactive devices, there are still many challenges
-    faced by the field \cite{10.1145/3173574.3173873}. One major barrier to
-    the creation of SCIs is the lack of standardized toolkits for
-    exploration and development \cite{10.1145/3173574.3173873}. Current
-    approaches require substantial time, effort, domain-specific knowledge,
-    and complex tools to create even simple SCIs. Unlike software-only
-    user interfaces, physical UIs---including SCIs---interact with
-    physical reality, requiring the addition of hardware components.
-    Researchers have developed physical toolkits to simplify creating physical
-    UIs, providing standardized hardware widget libraries
+    faced by the field \cite{Alexander:2018}. One major barrier to the creation
+    of SCIs is the lack of standardized toolkits for exploration and development
+    \cite{Alexander:2018}. Current approaches require substantial time,
+    effort, domain-specific knowledge, and complex tools to create even simple
+    SCIs. Unlike software-only user interfaces, physical UIs---including
+    SCIs---interact with physical reality, requiring the addition of hardware
+    components.  Researchers have developed physical toolkits to simplify
+    creating physical UIs, providing standardized hardware widget libraries
     \cite{Greenberg:2001,Bdeir:2009kz} and tools to ease the communication
-    between the digital and physical worlds \cite{Hartmann:2007p4338}.
+    between the digital and physical worlds \cite{Hartmann:2007}.
     
     Shape-Changing Interfaces introduce new problems, because there are no
     standardized widget libraries, actuation methods, or design tools. It
@@ -158,10 +157,10 @@
     that causes the desired shape-change. Toolkits for physical UIs offer
     pre-made physical widgets that let users concentrate on applications
     \cite{Greenberg:2001,Bdeir:2009kz}, but the bulk of the SCI literature
-    focuses on novel techniques (e.g., \cite{10.1145/2984511.2984520}) or
-    applications rather than broadly reusable widgets. The result is that SCIs
-    tend to be one-offs, custom-made for a specific application, and require
-    extensive technical prototyping skills.
+    focuses on novel techniques (e.g., \cite{Ou:2016}) or applications rather
+    than broadly reusable widgets. The result is that SCIs tend to be one-offs,
+    custom-made for a specific application, and require extensive technical
+    prototyping skills.
   
     As a first step towards addressing these challenges, we introduce \mp, a
     toolkit aimed at simplifying the design, fabrication, and actuation of
@@ -200,29 +199,28 @@
     pneumatic actuation was used for shape-changes.
     
     \subsection{Toolkits for Shape-Changing Interfaces}
-      Alexander \etal \cite{10.1145/3173574.3173873} identified twelve grand
+      Alexander \etal \cite{Alexander:2018} identified twelve grand
       challenges in SCIs research. Although many types of SCIs have been
       explored in the literature \cite{Sturdee:2018ce}, most are custom-made,
       one-off projects developed to illustrate an interaction technique,
       actuator, or application; hence, Alexander \etal
-      \cite{10.1145/3173574.3173873} call for the development of
+      \cite{Alexander:2018} call for the development of
       \textit{toolkits for SCI} to ``dramatically lower the barrier to
       implementation''. They call for three advances in research: a hardware
       prototyping platform, a software application layer, and tools for end-user
       programming. To these three we add a fourth important need, adapted from
-      Ledo \etal \cite{10.1145/3173574.3173610}: empowering new audiences,
-      implying ease of acquisition or fabrication. A number of projects in the
-      literature aim to overcome these barriers, either by explicitly presenting
-      toolkits for SCIs or by addressing one or more of these challenges.
+      Ledo \etal \cite{Ledo:2018a}: empowering new audiences, implying ease of
+      acquisition or fabrication. A number of projects in the literature aim to
+      overcome these barriers, either by explicitly presenting toolkits for SCIs
+      or by addressing one or more of these challenges.
       
-      Ledo \etal \cite{10.1145/3173574.3173610} define toolkits as
-      ``present[ing] users with a programming or configuration environment
-      consisting of many defined permutable building blocks, structures, or
-      primitives, with a sequencing of logical or design flow affording a path
-      of least resistance''. While few papers in the SCI space explicitly
-      identify their work as presenting toolkits, in this section we include
-      research which addresses any aspects which could be useful as part of a
-      toolkit.
+      Ledo \etal \cite{Ledo:2018a} define toolkits as ``present[ing] users with
+      a programming or configuration environment consisting of many defined
+      permutable building blocks, structures, or primitives, with a sequencing
+      of logical or design flow affording a path of least resistance''. While
+      few papers in the SCI space explicitly identify their work as presenting
+      toolkits, in this section we include research which addresses any aspects
+      which could be useful as part of a toolkit.
       
       Perhaps the most comprehensive example of a SCI toolkit is ShapeClip
       \cite{Hardy:2015dx}, a set of 1D linear actuators controlled by light
@@ -238,39 +236,39 @@
       perhaps the earliest example approaching an SCI toolkit was Topobo
       \cite{Raffle:2004jj}, a system of passive and active (motorized) building
       blocks that could record and re-play movements. LineFORM
-      \cite{10.1145/2807442.2807452} and ChainFORM \cite{nakagaki2016chainform}
-      are similarly collections of actuators which can record and re-play
-      movements, but focus on rotational rather than linear motion. Each of
-      these systems is constrained by its actuators: using motors limits the
-      minimum size, dictates the kinds of shape-change transformations
-      available, and leads to high-complexity hardware, requiring custom
-      circuitry that is unavailable to a casual user.
+      \cite{Nakagaki:2015} and ChainFORM \cite{Nakagaki:2016} are similarly
+      collections of actuators which can record and re-play movements, but focus
+      on rotational rather than linear motion. Each of these systems is
+      constrained by its actuators: using motors limits the minimum size,
+      dictates the kinds of shape-change transformations available, and leads to
+      high-complexity hardware, requiring custom circuitry that is unavailable
+      to a casual user.
       
       Another type of SCI system uses shape-memory alloys or nitinol wires to
       actuate shape changes. shape-memory alloy-based actuation has the
       advantage of small size and flexibility, but at the expense of actuation
-      speed. One early example, Bosu \cite{10.1145/1858171.1858205}, offered a
-      set of frames and fabric shapes on which the shape-memory alloy wires
-      could be fixed. While these components formed a small library of
-      transformable shapes, Bosu required users to assemble each component
-      manually.  NURBSforms \cite{10.1145/3374920.3374927} operated on the same
-      principle as Bosu, but used flexible circuit boards, providing a
-      standardized---and potentially mass-manufacturable---format. Both of these
-      toolkits demonstrate shape changes based primarily on the curvature
-      feature from Morphees+ \cite{10.1145/3173574.3174193}, a result of the
-      low-amplitude length change possible with shape-memory alloys.
+      speed. One early example, Bosu \cite{Parkes:2010}, offered a set of frames
+      and fabric shapes on which the shape-memory alloy wires could be fixed.
+      While these components formed a small library of transformable shapes,
+      Bosu required users to assemble each component manually.  NURBSforms
+      \cite{Tahouni:2020} operated on the same principle as Bosu, but used
+      flexible circuit boards, providing a standardized---and potentially
+      mass-manufacturable---format. Both of these toolkits demonstrate shape
+      changes based primarily on the curvature feature from Morphees+
+      \cite{10.1145/3173574.3174193}, a result of the low-amplitude length
+      change possible with shape-memory alloys.
       
       Some systems use pneumatic actuation to transform shapes. One of the
-      earliest projects in this space was PneUI \cite{Yao:2013bg}, which offered
+      earliest projects in this space was PneUI \cite{Yao:2013}, which offered
       a technological framework for pneumatically actuated shape-change.
       Although the downside was that its shape-changing objects were all
       manually created, it illustrated the versatility of soft, pneumatic
       shape-change via multiple types of transformations, including curvature,
       volume, and texture. Other pneumatically actuated SCIs include
-      Printflatables \cite{10.1145/3025453.3025898} and AeroMorph
-      \cite{10.1145/2984511.2984520}, both of which require custom-built
-      equipment to create, and Siloseam \cite{10.1145/3357236.3395473}, which
-      presents a manual workflow for shape-changing silicone bladders.
+      Printflatables \cite{Sareen:2017} and AeroMorph
+      \cite{Ou:2016}, both of which require custom-built equipment to create,
+      and Siloseam \cite{Moradi:2020}, which presents a manual workflow for
+      shape-changing silicone bladders.
       
       Aside from ShapeClip, none of these examples present themselves as toolkit
       research. Instead, they focus more on novel actuation schemes and
@@ -296,7 +294,7 @@
       interaction controls, enabling a combination of function and interface in
       a reusable building-block component. Later physical UI toolkits expanded
       on this idea, adding novel connections between modules
-      \cite{Bdeir:2009kz}, more powerful widgets \cite{Villar:2012hd}, or novel
+      \cite{Bdeir:2009kz}, more powerful widgets \cite{Villar:2012}, or novel
       form-factors \cite{Hodges:2014}. These examples illustrate a
       \textit{prefabricated} approach, where the physical widgets are designed
       and manufactured by a third party, and end users assemble, but don't
@@ -308,10 +306,10 @@
       A second approach to physical widgets is custom-fabrication. Toolkits in
       this category provide assistance to users in creating widgets (or
       widget-like components) tailored for a particular application. Midas
-      \cite{Savage:2012ev}, for example, provided tools to help users fabricate
+      \cite{Savage:2012}, for example, provided tools to help users fabricate
       customized touch sensors that could wrap around objects of varying sizes;
-      Pineal \cite{Ledo:2017ks} added ``remote widgets'' to smartphones and
-      watches via automated 3D modeling; and PaperPulse \cite{Ramakers:2015gi}
+      Pineal \cite{Ledo:2017} added ``remote widgets'' to smartphones and
+      watches via automated 3D modeling; and PaperPulse \cite{Ramakers:2015}
       fabricated predefined widgets with conductive inkjet printing. The
       advantage of this approach is much-greater flexibility: users can include
       different sizes and types of widgets in many configurations. However,
@@ -334,10 +332,10 @@
 
       Examples of pneumatically driven interfaces have mainly concentrated on
       exploring the diversity of interaction that such soft interfaces can
-      offer. For example, Kim \etal's Inflatable Mouse \cite{Kim:2008du}
+      offer. For example, Kim \etal's Inflatable Mouse \cite{Kim:2008}
       illustrated multiple input and output behaviors, Harrison and Hudson's
       inflatable buttons provided dynamic haptics \cite{Harrison:2009}, and
-      PneUI \cite{Yao:2013bg} demonstrated a wide variety of shape changes
+      PneUI \cite{Yao:2013} demonstrated a wide variety of shape changes
       possible with elastic air bags. Despite the versatility of these
       interfaces, they are difficult to create, involving intensive manual
       assembly. Recent work by Moradi and Torres \cite{Moradi:2020} underscores
@@ -349,7 +347,7 @@
       SCIs. Although subject to the limitations of 3D printers, creating SCIs
       this way can---at least in theory---significantly lessen the effort
       required to create usable transforming objects. Vazquez \etal created a
-      series of physical widgets using 3D printing \cite{Vazquez:2015dm}, and
+      series of physical widgets using 3D printing \cite{Vazquez:2015}, and
       Lee \etal developed a system of Lego-compatible pneumatic blocks for
       experimenting with soft robotics \cite{Lee:2018}. These projects relied on
       high-end multi-material inkjet-based 3D printers, which are not currently
@@ -372,8 +370,8 @@
     Before building \mp, a toolkit for prototyping SCIs, we discuss what
     kind of design goals we wanted to achieve in \mp in terms of toolkit design.
     We looked into review literature that suggests design guidelines for
-    toolkits \cite{10.1145/3173574.3173610}. Here we discuss how \mp meets four
-    of the five goals in toolkit research.
+    toolkits \cite{Ledo:2018a}. Here we discuss how \mp meets four of the five
+    goals in toolkit research.
       
     \begin{enumerate}
       \item \textit{Reducing Authoring Time and Complexity.}
@@ -400,18 +398,17 @@
         While pneumatically actuating SCIs allows designers to create a wide
         range of shape-change with a single actuation method, the fabrication of
         these artifacts is not always a straightforward process, often requiring
-        manual assembly~\cite{Yao:2013bg}, or special
-        machinery~\cite{10.1145/3025453.3025898, 10.1145/2984511.2984520}. Our
-        work aims to use existing, consumer-level tools (e.g., off-the-shelf
-        3D-printers, materials, and design tools) to fabricate SCIs.
+        manual assembly~\cite{Yao:2013}, or special machinery~\cite{Sareen:2017,
+        Ou:2016}. Our work aims to use existing, consumer-level tools (e.g.,
+        off-the-shelf 3D-printers, materials, and design tools) to fabricate
+        SCIs.
         
       \item \textit{Enabling Replication and Creative Exploration.}
         Ideal toolkits should support easy replication of previous work
         \cite{Greenberg2007} and exploring design spaces that has not examined
         before \cite{Olsen:2007ik}. To show that \mp has such properties, we
         replicate one of the SCIs that had a huge impact in the field
-        \cite{10.1145/2501988.2502032} as well as suggest novel interfaces with
-        \mp.
+        \cite{Follmer:2013} as well as suggest novel interfaces with \mp.
     \end{enumerate}
           
     Based on these design goals, we designed \mp. We aimed to build \mp to be
@@ -419,15 +416,14 @@
     reduce their iteration time and effort. One goal suggested for toolkit
     design that we did not aim was \textit{Creating Paths of Least Resistance,}
     which means that toolkits should guide users to design good interfaces
-    rather than bad ones \cite{Myers:2000us, 10.1145/3173574.3173873}.
-    SCI field is still at the early stage, and we believe that there are
-    too few design guidelines to be generalized (e.g.,
-    \cite{10.1145/2556288.2557360, 10.3389/frobt.2019.00079,
-    10.1145/2858036.2858350}) comparing to the vast design space of SCIs.
-    Therefore, we planned not to guide users what kind of SCIs they should
-    design at this stage of the research.  Future studies can contribute to the
-    design guidelines for SCIs using \mp, as it would allow quickly implementing
-    a wide range of SCIs.
+    rather than bad ones \cite{Myers:2000us, Alexander:2018}.  SCI field is
+    still at the early stage, and we believe that there are too few design
+    guidelines to be generalized (e.g., \cite{Gronvall:2014, Kim:2019jn,
+    Tiab:2016}) comparing to the vast design space of SCIs.  Therefore, we
+    planned not to guide users what kind of SCIs they should design at this
+    stage of the research.  Future studies can contribute to the design
+    guidelines for SCIs using \mp, as it would allow quickly implementing a wide
+    range of SCIs.
 
   \section{\mp Widgets}
     \mp is comprised of three basic components: (1) a set of shape-changing
@@ -780,26 +776,26 @@
         
     \subsection{Physical bar chart}
       The physical bar chart (Figure \ref{fig:appl_barchart}) was specifically
-      designed to replicate pin-based SCIs (e.g., \cite{10.1145/2501988.2502032,
-      Nakagaki:2016jt, 7542185, 10.1145/2858036.2858316,
-      10.1145/2702123.2702599}).  We wondered if \mp could easily replicate
-      existing SCIs, and pin-based SCIs have been widely used to introduce novel
-      interactions and understandings of SCIs.  Our 3D printer took 21 hours to
-      print nine Fold widgets (~2.3 hr per widget), which would take longer than
-      using off-the-shelf parts. However, the widgets would allow less assembly
-      time because users just need to plug tubes to the widgets and connect them
-      to modules.  Although it allowed quick prototyping, the final form is
-      different from existing pin-based SCIs. First, they do not have the
-      ``pin'' shape. To improve the form factor, users would need to print a
-      static pin on top of each widget or assemble and hide the widgets. Second,
-      the resolution is lower than high-resolution ones (e.g., a pin in inFORM
-      \cite{10.1145/2501988.2502032} has a 9.525 mm$^2$ footprint). Currently a
-      widget has a footprint of 625 mm$^2$ (2.5 cm x 2.5 cm) and need spaces
-      between them. If we reduce the footprint of the widget, the widget would
-      have less length change with the same number of folds. Additionally, we
-      noticed the bar chart tilted slightly to one side when actuated. As a
-      possible remedy, we could insert plastic separators between each of the
-      fold widgets to prevent tilting on actuation.
+      designed to replicate pin-based SCIs (e.g., \cite{Follmer:2013,
+      Nakagaki:2016jt, Everitt:2016, Hardy:2015dx}).  We wondered if \mp could
+      easily replicate existing SCIs, and pin-based SCIs have been widely used
+      to introduce novel interactions and understandings of SCIs.  Our 3D
+      printer took 21 hours to print nine Fold widgets (~2.3 hr per widget),
+      which would take longer than using off-the-shelf parts. However, the
+      widgets would allow less assembly time because users just need to plug
+      tubes to the widgets and connect them to modules.  Although it allowed
+      quick prototyping, the final form is different from existing pin-based
+      SCIs. First, they do not have the ``pin'' shape. To improve the form
+      factor, users would need to print a static pin on top of each widget or
+      assemble and hide the widgets. Second, the resolution is lower than
+      high-resolution ones (e.g., a pin in inFORM \cite{Follmer:2013} has a
+      9.525 mm$^2$ footprint). Currently a widget has a footprint of 625 mm$^2$
+      (2.5 cm x 2.5 cm) and need spaces between them. If we reduce the footprint
+      of the widget, the widget would have less length change with the same
+      number of folds. Additionally, we noticed the bar chart tilted slightly to
+      one side when actuated. As a possible remedy, we could insert plastic
+      separators between each of the fold widgets to prevent tilting on
+      actuation.
         
       \begin{figure}[htb]
         \centering
@@ -861,20 +857,20 @@
         
       Each study consisted of three parts. First, the participants signed a
       consent form and answered to biographical questionnaire (10 min). Second,
-      we showed examples of SCIs \cite{10.1145/2501988.2502032, Yao:2013bg}, and
-      asked the participants to brainstorm ideas for new shape-changing
-      interfaces they want (20 min). To help them brainstorm, we asked them to
-      think about their work and daily life. We also provided them a few ideas
-      from other participants when they wanted \cite{10.1145/2675133.2675239}.
-      They were then asked to choose one of the ideas to design for the rest of
-      the user study.  Lastly, we demonstrated our printed widgets and two
-      example applications (umbrella pusher and anti-rain phone case) and asked
-      the participants to 3D model their ideas using \mp plug-in in a
-      think-aloud manner (30 min). We showed them how to use the plug-in and
-      supported them when they do not know how to use other Fusion 360
-      functions. After the 3D modeling, we asked them questions about strengths
-      and weaknesses of the \mp plug-in. Note that the Auxetic widget was not
-      implemented in the plug-in at the moment of the study.
+      we showed examples of SCIs \cite{Follmer:2013, Yao:2013}, and asked the
+      participants to brainstorm ideas for new shape-changing interfaces they
+      want (20 min). To help them brainstorm, we asked them to think about their
+      work and daily life. We also provided them a few ideas from other
+      participants when they wanted \cite{Siangliulue:2015}. They were then
+      asked to choose one of the ideas to design for the rest of the user study.
+      Lastly, we demonstrated our printed widgets and two example applications
+      (umbrella pusher and anti-rain phone case) and asked the participants to
+      3D model their ideas using \mp plug-in in a think-aloud manner (30 min).
+      We showed them how to use the plug-in and supported them when they do not
+      know how to use other Fusion 360 functions. After the 3D modeling, we
+      asked them questions about strengths and weaknesses of the \mp plug-in.
+      Note that the Auxetic widget was not implemented in the plug-in at the
+      moment of the study.
 
     \subsection{Results}
       Three of the authors analyzed the transcribed interviews from all the
@@ -955,7 +951,7 @@
           start with, `Okay, this may be possible' ... Probably I can also do
           something with that...just by looking at the module I can learn what
           are the possibilities''.
-                  
+
           However, the difficulty of editing the widgets caused difficulties for
           users (especially novices) to freely explore the widgets. More than
           one participant revealed the desire for characterization of widgets as
@@ -974,7 +970,7 @@
     mentioned earlier, we use a constant pressure of 100kPa to power our module
     and widgets, which causes smaller widgets to be actuated quicker than larger
     ones. Future work can explore how to employ pneumatic actuation to represent
-    these features by using techniques such as jamming~\cite{Follmer:2012cx}, or
+    these features by using techniques such as jamming~\cite{Follmer:2012}, or
     by dynamically regulating pressure to vary actuation speed.
       
     Future work can also continue to explore the effects of different
@@ -1011,9 +1007,9 @@
       
     Finally, we plan to evaluate \mp in terms of the quality of interaction. It
     would be interesting to compare \mp to SCIs that have other mechanism other
-    than pneumatic actuation, such as mechanical \cite{10.1145/3173574.3173724}
-    or manual \cite{10.1145/3131277.3132179}.% in VR. %don't give it away!
-      
+    than pneumatic actuation, such as mechanical \cite{Abtahi:2018a} 
+    or manual \cite{McClelland:2017}.
+
   \section{Conclusion}
     In this paper, we presented MorpheesPlug, a toolkit for prototyping
     shape-changing interfaces (SCIs). By providing six widgets and using
