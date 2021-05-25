@@ -4,36 +4,9 @@
 		\includegraphics[width=0.33\textwidth]{print-and-play/airtouch/bunny_render.jpg}
 	\end{figure}
 
-  \red{This page should explain how this paper ties together with the thesis}
-
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare tempus
-	risus id consectetur. In posuere ligula vel neque vehicula, nec rhoncus elit
-	dapibus. Proin facilisis porttitor diam, vitae eleifend odio pellentesque id.
-	Fusce eu semper erat, et malesuada massa. Duis laoreet sed neque a dictum.
-	Quisque convallis accumsan justo sit amet vulputate. Integer auctor eros ac
-	accumsan accumsan. Integer hendrerit urna id convallis tempus. Donec sem est,
-	pretium sit amet gravida sed, suscipit a sapien. In eros nulla, bibendum nec
-	malesuada in, sollicitudin a turpis. In egestas molestie iaculis. Cras eros
-	quam, placerat eget eleifend sed, condimentum sit amet metus.
-
-	Vivamus vitae lacinia lorem. Ut efficitur sollicitudin felis, et iaculis odio.
-	Vestibulum sit amet nulla faucibus, egestas lorem quis, consequat neque.
-	Integer vel laoreet ligula, a varius risus. Curabitur ac eleifend neque.
-	Praesent sagittis volutpat libero, ut maximus arcu iaculis eu. Interdum et
-	malesuada fames ac ante ipsum primis in faucibus. Sed maximus eros eget nisl
-	scelerisque egestas. Mauris bibendum laoreet felis, cursus vestibulum enim
-	condimentum nec.
-
-	Nunc eget faucibus tortor. Fusce nisl lectus, congue in blandit non, pretium
-	non metus. Fusce efficitur varius interdum. Phasellus ullamcorper gravida
-	odio. Nulla accumsan purus risus, vitae porta nibh auctor non. Nulla varius
-	eros scelerisque convallis maximus. In sed blandit augue. Proin commodo lacus
-	ac orci suscipit porta. Aenean vitae libero pretium, convallis dui ut,
-	accumsan leo. Morbi gravida scelerisque sapien quis fringilla. Aliquam nisl
-	dolor, molestie eu nulla quis, malesuada pharetra velit. Vivamus porta dictum
-	metus, vel molestie ex fermentum in. Vestibulum pellentesque vel ante vel
-	feugiat. Integer mattis vitae libero nec laoreet. Aliquam erat volutpat. In
-	hac habitasse platea dictumst.
+	This chapter is very similar to the paper I published with the same
+	name~\cite{Tejada:2020}. In this chapter, I introduce \at, a technique for
+	fabricating tangible devices that respond to user's touch.
 
 	\newpage
 
@@ -55,7 +28,7 @@
 
 	\noindent
 	\textbf{DOI}\\
-	\textit{\href{https://doi.org/10.1145/3313831.3376136}}
+	\textit{\href{https://doi.org/10.1145/3313831.3376136}{https://doi.org/10.1145/3313831.3376136}}
 
 	\bigskip
 
@@ -93,6 +66,27 @@
 	\vfill
 
 	\newpage
+
+  \begin{figure}
+    \centering
+    \subfloat[]{\label{fig:animal_family}\includegraphics[height=.3\textwidth]{print-and-play/airtouch/animal_family.jpg}}
+    \subfloat[]{\label{fig:structure}\includegraphics[height=.3\textwidth]{print-and-play/airtouch/bunny_render.jpg}}
+    \subfloat[]{\label{fig:barchart}\includegraphics[height=.3\textwidth, trim={4cm 0 0 0},clip]{print-and-play/airtouch/touch-bunny_ear.jpg}}
+
+    \caption{\at augments 3D-printed objects to enable touch-sensitivity. It
+    works by detecting the pressure change resulting from users blocking tiny
+    air outlets fabricated into the objects. Figure \ref{fig:animal_family}
+    Three active animal objects: each has touch points on its ear, nose, foot,
+    and back. The same machine learning model works interchangeably with all
+    three. Figure \ref{fig:structure} Structure inside the bunny, illustrated
+    via computer rendering. The external solid object is shown as clear, while
+    the internal hollow tubes are rendered in translucent blue.  Figure
+    \ref{fig:barchart} The \at-enabled bunny with interactive locations on the
+    ear, nose, back and feet. When the user touches any of these locations, the
+    respective label is displayed.}
+
+    \label{fig:teaser}%
+  \end{figure}
 
 	% Unsure if I should keep the abstract here. It's already in the preface.
 	\section*{Abstract}
@@ -302,10 +296,10 @@
 				a identifiable rise in the barometric pressure inside the object. Our
 				system records these changes in air pressure using a barometric sensor,
 				and translates them to an outlet ID, and subsequent position on the
-				object's surface. Figure \ref{fig:bunny-touches} shows an abstract
-				representation of the unique barometric increases sensed when the user
-				covers different outlets, and Figure \ref{fig:bar-touches} shows actual sensed
-				touch data.
+				object's surface. Figure 3.2 shows an abstract representation of the
+				unique barometric increases sensed when the user covers different
+				outlets, and Figure \ref{fig:bar-touches} shows actual sensed touch
+				data.
 
     \section{Parameter Exploration}
 			Every \at object contains a flow-distribution chamber, tubes, and outlets.
@@ -469,28 +463,12 @@
 				the pressure change between neighboring outlet sizes was insufficient to
 				offer a clear separation in the presence of sensor noise (approximately
 				0.01 kPa). Therefore, all of our subsequent objects are printed with at
-				least a 0.1\,mm$^2$ separation between hole areas. Table
-				\ref{tab:hole-sizes} illustrates, at actual size, the final set of 12
-				outlet dimensions we use.
+				least a 0.1\,mm$^2$ separation between hole areas.
             
 				As discussed earlier, the tubes connecting the outlets to the chamber
 				are 5\,mm in diameter to prevent clogging. We therefore reduce the last
 				1\,mm of the tube to form the outlet, as shown in Figure
 				\ref{fig:tube-reduction}.        
-
-				% \newcommand{\ccc}[1]{ \begin{tikzpicture} \fill[black] (0,0) circle [radius=#1mm]; \end{tikzpicture}}
-				% \begin{table}[]
-				% 	\centering
-				% 	\newcolumntype{C}{>{\centering\scriptsize\arraybackslash}X}
-				% 	\begin{tabularx}{\columnwidth}{CCCCCCCCCCCC}
-				% 			\ccc{0.334} & \ccc{0.378} & \ccc{0.418} & \ccc{0.455} & \ccc{0.489} & \ccc{0.52} & \ccc{0.55} & \ccc{0.578} & \ccc{0.605} & \ccc{0.631} & \ccc{0.656} & \ccc{0.679} \\
-				% 			0.334 & 0.378 & 0.418 & 0.455 & 0.489 & 0.52 & 0.55 & 0.578 & 0.605 & 0.631 & 0.656 & 0.679 \\
-				% 	\end{tabularx} 
-				% 	\caption{Final outlet dimensions shown at actual size with radius in
-				% 		millimeters indicated under each. The area increases by .1\,mm$^2$
-				% 		between each subsequent hole, ranging between 0.35--1.45\,mm$^2$.}
-				% 	\label{tab:hole-sizes}
-				% \end{table}
 
     		\begin{figure}
     			\centering
@@ -528,6 +506,7 @@
 			the previous one: if the current mean is higher than the previous, an
 			outlet has been covered; if not, an outlet has been released.
 					
+			\newpage
 			Once we have determined that a touch event has happened, we identify which
 			outlet has been covered. We take the mean of the 1000 samples previous to
 			the touch event as the pressure baseline, and divide it by the mean of the
@@ -612,15 +591,16 @@
 		socket connection) from Python code running the touch detection described
 		above.
 		
+		\newpage
 		\subsection*{Interactive 3D Bar Chart}
 			Recent work has highlighted the benefits of data
 			physicalization~\cite{Jansen:2015cu}. We designed a three-dimensional bar
 			plot displaying the relation between the submitted and accepted papers in
 			the past four years to CHI, UIST, and TEI (Figure
-			\ref{fig:barchart,fig:app_1}).  To obtain more information about the
-			proceedings, the user touches the top of a bar, and the companion
-			application shows the acceptance rate, number of accepted papers for the
-			year and conference in question.
+			\ref{fig:app_1}).  To obtain more information about the proceedings, the
+			user touches the top of a bar, and the companion application shows the
+			acceptance rate, number of accepted papers for the year and conference in
+			question.
 		    
 		\subsection*{Interactive Animals}
 			\at can identify interactions on objects of varying geometries, but with
