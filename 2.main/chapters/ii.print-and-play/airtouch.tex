@@ -4,9 +4,33 @@
 		\includegraphics[width=0.33\textwidth]{print-and-play/airtouch/bunny_render.jpg}
 	\end{figure}
 
+	\vfill
+
 	This chapter is very similar to the paper I published with the same
 	name~\cite{Tejada:2020}. In this chapter, I introduce \at, a technique for
 	fabricating tangible devices that respond to user's touch.
+
+	In this chapter I introduce a pneumatic sensing technique for fabricating
+	tangible devices that are able to sense user's touch using 3D printers. Before
+	\at, techniques using pneumatic sensing were present predominantly to enable
+	sensing in soft objects: the barometric pressure inside an object would vary
+	as it is deformed by pressing or squeezing. \at is the first technique to
+	enable sensing of user's interactions on \emph{hard} objects, using principles
+	of fluid behavior.
+
+	In this chapter, I introduce the operating principle of \at, present the
+	chosen internal structure design, and justify the design decisions made
+	regarding this interior structure. I detail the evaluation procedure, and the
+	obtained accuracies, for this approach, and close with a series of inspiring
+	applications, and discussions on the future of pneumatic sensing techniques.
+
+	The most challenging aspect of developing \at was to produce a technique that
+	would not require per-object calibrations post-print. However, using
+	strategically placed tube reductions, and standardized cavity sizes, enabled
+	\at objects of the same outlet configuration reuse the same machine learning
+	model to identify interactions, regardless of their exterior geometry.
+
+	\vfill
 
 	\newpage
 
@@ -88,8 +112,7 @@
     \label{fig:teaser}%
   \end{figure}
 
-	% Unsure if I should keep the abstract here. It's already in the preface.
-	\section*{Abstract}
+	\subsubsection*{Abstract}
 		3D printing technology can be used to rapidly prototype the look and feel of
 		3D objects. However, the objects produced are passive. There has been
 		increasing interest in making these objects \emph{interactive}, yet they
