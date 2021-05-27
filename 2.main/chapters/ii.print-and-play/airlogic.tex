@@ -4,6 +4,30 @@
     \includegraphics[width=0.33\textwidth]{print-and-play/airlogic/bunny-render.png}
   \end{figure}
 
+  Despite the success of \at, \bh, and \mp in facilitating the construction of
+  tangible devices that can sense, and provide output to user's interactions,
+  they still require a computing device to process and identify the provided
+  input, and to drive the output.  This limitation inspired me to think about
+  the construction of tangible devices where \emph{everything} is encapsulated
+  in the device: input sensing, logic processing, and output display. This
+  upcoming chapter is the result of this exploration.
+
+  This chapter, based on unpublished work~\cite{Tejada:}, introduces a toolkit
+  for fabricating stand-alone tangible devices where all the input, logic
+  processing, and output display are carried out in the device. In this chapter
+  I present the set of air-powered widgets that make up the \al toolkit, and the
+  underlying technologies that enable them. Additionally, and similarly to the
+  previously discussed techniques, I developed a design environment to enable
+  users to embed \al widgets into existing three-dimensional models. Last, this
+  chapter closes with a set of illustrative applications, and discussions on
+  \al's performance and possible directions for future work.
+
+  The main challenge undertaken with \al was the design the widgets that
+  comprise the toolkit. Arriving at the final designs for the logic widget
+  entailed significant iterations, because of the limited documentation on the
+  operation of these designs.
+
+
   \newpage
 
   This chapter is based on the collaborative effort described below.
@@ -63,7 +87,7 @@
 
   \newpage
 
-  \section{Abstract}
+  \subsubsection*{Abstract}
     The promise of on-demand fabrication of custom, interactive devices is
     closer to reality thanks to recent developments in 3D-printing of
     interactive devices. While recent work has presented novel ways to
@@ -514,10 +538,10 @@
     pipeline for embedding \al widgets inside existing 3D models.
 
     When prototyping the desired interaction, the designer can construct a
-    \red{circuit} using our encapsulated widgets. These widgets can be
-    connected using off-the-shelf 6\,mm wide plastic tubing, and powered by
-    a constant air source. Once the design is completed, it can be
-    translated to an existing 3D model.
+    transit using our encapsulated widgets. These widgets can be connected using
+    off-the-shelf 6\,mm wide plastic tubing, and powered by a constant air
+    source. Once the design is completed, it can be translated to an existing 3D
+    model.
 
     Further, to aid designers augment their 3D models with \al
     functionalities, we developed a widget library, available as a plugin
@@ -655,9 +679,9 @@
       \subsubsection{Pitch switch}
         \label{sec:pitch}
         We used our slider, button, \texttt{AND}, and whistle widgets to
-        fabricate a \red{pitch selector}. The user selects the frequency
-        she wants to play using a slider, and when the ``play'' button is
-        pressed, the desired tone is played using the respective whistle.
+        fabricate a pitch selector. The user selects the frequency she wants to
+        play using a slider, and when the ``play'' button is pressed, the
+        desired tone is played using the respective whistle.
 
         \begin{figure}[h]
           \centering
