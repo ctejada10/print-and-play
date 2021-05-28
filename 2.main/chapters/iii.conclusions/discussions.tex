@@ -7,15 +7,14 @@
   future work.
 
   \section{Discussion of Projects}
-    The main takeaway from this thesis is this: constructing tangible,
-    interactive devices is hard---significantly harder than their on-screen
-    counterparts---because to do so it is necessary to be well-versed in
-    software, hardware, and digital fabrication. Ideally, digital fabrication
-    equipment should abstract most, if not all, of these complications and
-    enable designers to fabricate tangible, interactive devices that are
-    immediately usable after fabrication. This ideal scenario is what I call
-    \emph{\papf}: a fabrication paradigm where tangible devices are printed, not
-    assembled.
+    The main takeaway from this thesis is this: in order to realize the
+    fabrication revolution, and enable designers to construct on-demand tangible
+    devices, the fabrication of this devices should be as streamlined as
+    possible. Ideally, digital fabrication equipment should abstract most, if
+    not all, of these complications and enable designers to fabricate tangible,
+    interactive devices that are immediately usable after fabrication. This
+    ideal scenario is what I call \emph{\papf}: a fabrication paradigm where
+    tangible devices are printed, not assembled.
 
     In this thesis, I have presented four \pap techniques: \al, \bh, \al,
     \mp; each aimed to address specific barriers in sensing, processing, and
@@ -72,11 +71,9 @@
     This stands in contrast to the techniques included in this thesis, where the
     advent of new fabrication technologies will only improve their performance.
     For example, higher resolution printing can enable \at to embed more
-    touch-sensitive locations throughout the model, breakthroughs in flexible
+    touch-sensitive locations throughout the model, or breakthroughs in flexible
     materials can allow \mp to construct a wider range of shapes without the use
-    of internal support, and the use of acoustic metamaterials like the ones
-    presented in~\cite{Haberman:2016} could allow \bh to render a wider range of
-    frequencies for its interactive locations.
+    of internal support.
 
     Last, in this thesis I have presented a series of projects that enable \papf
     using air-powered objects, via custom internal structures. As mentioned
@@ -132,24 +129,28 @@
       The work discussed above focuses on demonstrating the possibilities of
       constructing tangible devices with little designer intervention
       post-print, rather than exploring a variety of interaction modalities. An
-      interesting direction for future work is to investigate how the \papf
-      principles can be materialized with various interaction modalities like
-      deformation, and environmental interactions, as well as expand the
-      interaction modalities already explored in this thesis.
+      interesting direction for future work is to investigate \papf techniques
+      to construct tangible devices that expand on the interaction modalities
+      presented in this thesis. I speculate future research can approach this in
+      three main ways: techniques that provide richer touch input, techniques
+      that provide rich output, and techniques for constructing tangibles that
+      can sense their environments.
 
-      All the sensing techniques presented in this thesis are tailored for
-      interaction on hard tangible devices. An interesting avenue for future
-      work to explore is the implementation of \pap techniques that enable
-      reliable deformation sensing in soft, and flexible objects. Regardless of
-      the technique chosen to implement this interaction modality (e.g.,
-      pneumatic, acoustic, or electric sensing), I believe the main challenge in
-      implementing this interaction modality in a \pap way will be the removal
-      of per-object calibration of machine learning models. Because of each
-      object's varying geometry, interacting with different object should yield
-      different results. Inspired by \at's success in reusing machine learning
-      models for tangible devices of varying geometries, future work can explore
-      the use of custom, stable interior structures for deformation (e.g.,
-      press, squeeze) sensing.
+      In order to enable richer touch interaction on tangible devices, future
+      research on \papf techniques should explore two avenues: deformation sensing,
+      and multi-touch. All the sensing techniques presented in this thesis are
+      tailored for interaction on hard tangible devices. An interesting
+      direction for future work to explore is the implementation of \pap
+      techniques that enable reliable deformation sensing in soft, and flexible
+      objects.  Regardless of the technique chosen to implement this interaction
+      modality (e.g., pneumatic, acoustic, or electric sensing), I believe the
+      main challenge in implementing this interaction modality in a \pap fashion
+      will be the removal of per-object calibration of machine learning models.
+      Because of each object's varying geometry, interacting with different
+      object should yield different results. Inspired by \at's success in
+      reusing machine learning models for tangible devices of varying
+      geometries, future work can explore the use of custom, stable interior
+      structures for deformation (e.g., press, squeeze) sensing.
 
       Continuing, I have presented two techniques for the construction of
       efforts that are able to respond to touch interactions: \at and \al. While
@@ -161,16 +162,22 @@
       constructing tangible devices capable of sensing touch interaction in
       various locations.
 
-      Conversely, with \al I explored ways to physicalize the output of logical
-      operations. These outputs can also be expanded by future work. For
-      example, \al presents a vibrotactile motor to provide haptic feedback to
-      its users; future work can explore other haptic interaction modalities as
-      output, like temperature. Similarly, \al presents acoustic feedback to its
-      users using whistles. Future work can explore \pap ways to construct
-      speakers, similar to those presented in \cite{Ishiguro:2014}, and provide
-      richer acoustic output. Continuing, while with \al and \mp I explored
-      different ways to provide visual output to users, future work can explore
-      more intricate ways to visualize output using LEDs.
+      Another direction future work on \papf should explore is providing richer
+      output to user's interactions. With \al I explored ways to physicalize the
+      output of logical operations. These outputs can also be expanded by future
+      work. For example, \al presents a vibrotactile motor to provide haptic
+      feedback to its users; future work can explore other haptic interaction
+      modalities as output, like temperature. Similarly, \al presents acoustic
+      feedback to its users using whistles. Future work can explore \pap ways to
+      construct speakers, similar to those presented in \cite{Ishiguro:2014},
+      and provide richer acoustic output. Continuing, while with \al and \mp I
+      explored different ways to provide visual output to users, future work can
+      enrich this output modality by investigating in novel ways to embed
+      displays into fabricated objects. Similarly how \cite{VanDerHeyden:1969}
+      employs techniques closely related to \al to develop a seven-segment
+      display without requiring electronics or moving parts, future work can
+      investigate novel, \pap-friendly techniques to incorporate rich visual
+      output in tangible devices.
       
       Last, an interesting avenue to explore is the construction of tangible
       devices that not only respond to user's interactions, but to changes in
@@ -178,10 +185,8 @@
       in the creation of such devices. The use of materials which properties
       change depending on their environment can enable the easy construction of
       ``tangible sensors''. These sensors can respond to environmental
-      temperature, humidity, or sound, and act accordingly (e.g., a smart
-      sunglass case that opens when it is bright out).
+      temperature, humidity, or sound, and act accordingly.
 
-    \newpage
     \subsection{Support for other fabrication equipment}
       In this thesis I have presented four \pap ways to construct tangible,
       interactive devices using 3D printers. This does not mean, however, that
