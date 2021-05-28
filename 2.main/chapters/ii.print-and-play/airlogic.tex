@@ -1,39 +1,32 @@
 \chapter{AirLogic} \label{ch:airlogic}
   \begin{figure}[h]
     \centering
-    \includegraphics[width=0.33\textwidth]{example-image-duck}
+    \includegraphics[width=0.33\textwidth]{print-and-play/airlogic/bunny-render.png}
   \end{figure}
 
-  \red{This page should explain how this paper ties together with the thesis}
+  Despite the success of \at, \bh, and \mp in facilitating the construction of
+  tangible devices that can sense, and provide output to user's interactions,
+  these techniques still require a computing device to process and identify the
+  provided input, and to drive the output.  This limitation inspired me to think
+  about the construction of tangible devices where \emph{everything} is
+  encapsulated in the device: input sensing, logic processing, and output
+  display. This upcoming chapter is the result of this exploration.
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare tempus
-  risus id consectetur. In posuere ligula vel neque vehicula, nec rhoncus elit
-  dapibus. Proin facilisis porttitor diam, vitae eleifend odio pellentesque id.
-  Fusce eu semper erat, et malesuada massa. Duis laoreet sed neque a dictum.
-  Quisque convallis accumsan justo sit amet vulputate. Integer auctor eros ac
-  accumsan accumsan. Integer hendrerit urna id convallis tempus. Donec sem est,
-  pretium sit amet gravida sed, suscipit a sapien. In eros nulla, bibendum nec
-  malesuada in, sollicitudin a turpis. In egestas molestie iaculis. Cras eros
-  quam, placerat eget eleifend sed, condimentum sit amet metus.
+  This chapter, based on unpublished work~\cite{Tejada:}, introduces a toolkit
+  for fabricating stand-alone tangible devices where all the input, logic
+  processing, and output display are carried out in the device. In this chapter
+  I present the set of air-powered widgets that make up the \al toolkit, and the
+  underlying technologies that enable them. Additionally, and similarly to the
+  previously discussed techniques, I developed a design environment to enable
+  users to embed \al widgets into existing three-dimensional models. Last, this
+  chapter closes with a set of illustrative applications, and discussions on
+  \al's performance and possible directions for future work.
 
-  Vivamus vitae lacinia lorem. Ut efficitur sollicitudin felis, et iaculis odio.
-  Vestibulum sit amet nulla faucibus, egestas lorem quis, consequat neque.
-  Integer vel laoreet ligula, a varius risus. Curabitur ac eleifend neque.
-  Praesent sagittis volutpat libero, ut maximus arcu iaculis eu. Interdum et
-  malesuada fames ac ante ipsum primis in faucibus. Sed maximus eros eget nisl
-  scelerisque egestas. Mauris bibendum laoreet felis, cursus vestibulum enim
-  condimentum nec.
+  The main challenge undertaken with \al was the design the widgets that
+  comprise the toolkit. Arriving at the final designs for the logic widget
+  entailed significant iterations, because of the limited documentation on the
+  operation of these designs.
 
-  Nunc eget faucibus tortor. Fusce nisl lectus, congue in blandit non, pretium
-  non metus. Fusce efficitur varius interdum. Phasellus ullamcorper gravida
-  odio. Nulla accumsan purus risus, vitae porta nibh auctor non. Nulla varius
-  eros scelerisque convallis maximus. In sed blandit augue. Proin commodo lacus
-  ac orci suscipit porta. Aenean vitae libero pretium, convallis dui ut,
-  accumsan leo. Morbi gravida scelerisque sapien quis fringilla. Aliquam nisl
-  dolor, molestie eu nulla quis, malesuada pharetra velit. Vivamus porta dictum
-  metus, vel molestie ex fermentum in. Vestibulum pellentesque vel ante vel
-  feugiat. Integer mattis vitae libero nec laoreet. Aliquam erat volutpat. In
-  hac habitasse platea dictumst.
 
   \newpage
 
@@ -68,7 +61,7 @@
   \noindent
   \textbf{What was the role of the PhD student in designing the study?}\\
   \textit{The PhD student was the first author of the paper, and responsible
-    from of the described studies.}
+    of the described studies.}
 
   \bigskip
 
@@ -94,7 +87,7 @@
 
   \newpage
 
-  \section{Abstract}
+  \subsubsection*{Abstract}
     The promise of on-demand fabrication of custom, interactive devices is
     closer to reality thanks to recent developments in 3D-printing of
     interactive devices. While recent work has presented novel ways to
@@ -181,7 +174,7 @@
     functions analogous to those preformed by electrical circuits. Here we
     briefly explain how each of \al's three main parts (input, logic,
     output) work in the context of the sample object illustrated in
-    Figure \ref{fig:teaser}, A; later sections describe these components in
+    Figure \ref{fig:app-bunny}, A; later sections describe these components in
     greater detail.
 
     After designing and printing the bunny, the user can immediately
@@ -214,13 +207,6 @@
     blocked) would cause back-pressure throughout the system and impair the
     functionality of other components. The vents allow any such negative
     flow to be safely discharged to atmosphere.
-
-    \begin{figure}
-      \centering
-      \includegraphics[width=0.5\textwidth]{example-image-duck}
-      \caption{Operating principle}
-      \label{fig:app-slider}
-    \end{figure}
 
   \section{Related Work}
     Our work touches upon multiple areas of research including the
@@ -519,7 +505,7 @@
             enters the whistle widget through the intake, and exhausts
             through the fipple, making a tone while doing so. By varying
             the size of the internal chamber in our whistle, we can change
-            the tone generated~\cite{Helmholtz:1885}.
+            the tone generated~\cite{Helmholtz:1885vp}.
           \item \emph{Oscillating actuator}. 
             Another manner to provide visual output is to agitate sections
             of an \al object. To do so, we constructed a wiggler widget
@@ -552,10 +538,10 @@
     pipeline for embedding \al widgets inside existing 3D models.
 
     When prototyping the desired interaction, the designer can construct a
-    \red{circuit} using our encapsulated widgets. These widgets can be
-    connected using off-the-shelf 6\,mm wide plastic tubing, and powered by
-    a constant air source. Once the design is completed, it can be
-    translated to an existing 3D model.
+    transit using our encapsulated widgets. These widgets can be connected using
+    off-the-shelf 6\,mm wide plastic tubing, and powered by a constant air
+    source. Once the design is completed, it can be translated to an existing 3D
+    model.
 
     Further, to aid designers augment their 3D models with \al
     functionalities, we developed a widget library, available as a plugin
@@ -652,20 +638,10 @@
       \subsubsection{Results}
         Our tests uncovered that the operating pressures of our widgets
         vary with their type. Our input widgets perform best when powered
-        with a constant air source with pressures from \red{999}
-        kilopascals (kPa), to \red{999} kPa. In contrast, our logic widgets
-        presented an operating range of \red{000} to \red{000} kPa, while
-        our output widgets operate best when actuated with pressured from
-        \red{111} to \red{111} kPa. Figure \ref{fig:operating-ranges} presents
-        the results of our explorations.
-
-        \begin{figure}
-          \centering
-          \includegraphics[width=0.5\textwidth]
-            {example-image-duck}
-          \caption{Operating ranges from our widgets}
-          \label{fig:operating-ranges}
-        \end{figure}
+        with a constant air source with pressures from 50 kilopascals (kPa), to
+        200 kPa. In contrast, our logic widgets presented an operating range of
+        50 to 300 kPa, while our output widgets operate best when
+        actuated with pressured from 150 to 250 kPa. 
 
         In addition, we found that, in average, our logic widgets lose half of
         the input pressure when processing their respective operations, while
@@ -681,12 +657,13 @@
           \label{fig:pressure-losses}
         \end{figure}
 
-    % Expand descriptions
     \subsection{Example Applications}
       In this section we present a series of applications constructed using
       \al. These applications illustrate \al's capabilities and potential
       for fabricating stand-alone, custom interactive objects without the
-      use of any electronics.
+      use of any electronics. These applications were not constructed, but their
+      behavior was simulated using fluid dynamics simulation
+      software~\cite{CFD:}.
 
       \subsubsection{Interactive bunny}
         Using our touch, \texttt{OR}, and wiggler widgets, we constructed
@@ -695,8 +672,7 @@
 
         \begin{figure}[h]
           \centering
-          \includegraphics[width=0.5\textwidth]
-            {example-image-duck}
+          \includegraphics[width=0.7\textwidth]{print-and-play/airlogic/bunny-render.png}
           \caption{Interactive bunny}
           \label{fig:app-bunny}
         \end{figure}
@@ -704,14 +680,13 @@
       \subsubsection{Pitch switch}
         \label{sec:pitch}
         We used our slider, button, \texttt{AND}, and whistle widgets to
-        fabricate a \red{pitch selector}. The user selects the frequency
-        she wants to play using a slider, and when the ``play'' button is
-        pressed, the desired tone is played using the respective whistle.
+        fabricate a pitch selector. The user selects the frequency she wants to
+        play using a slider, and when the ``play'' button is pressed, the
+        desired tone is played using the respective whistle.
 
         \begin{figure}[h]
           \centering
-          \includegraphics[width=0.5\textwidth]
-            {example-image-duck}
+          \includegraphics[width=0.7\textwidth]{print-and-play/airlogic/whistle-render.png}
           \caption{Pitch slider}
           \label{fig:app-slider}
         \end{figure}
@@ -724,21 +699,12 @@
 
         \begin{figure}[h]
           \centering
-          \includegraphics[width=0.5\textwidth]
-            {example-image-duck}
+          \includegraphics[width=0.7\textwidth]{print-and-play/airlogic/puzzle-render.png}
           \caption{Interactive Puzzle}
           \label{fig:app-slider}
         \end{figure}
       
   \section{Discussion \& Limitations}
-    % \subsection{Scalability}
-    %   Our characterization efforts for our widgets uncovered the
-    %   operating barometric pressure range, and intrinsic pressure losses in
-    %   our designs. Using these values as reference, given a constant air
-    %   source of \red{999} kPa~\footnote{For reference, human lungs can
-    %   pressurize up to 12.4 kPa.}, we can connect up to \red{9}
-    %   widgets in series to create an \al object.
-
       \subsection{Chaining logic widgets}
         While our applications illustrate the capacity of using multiple
         logic widgets in an \al object (see Figure \ref{sec:pitch} and
@@ -837,7 +803,7 @@
         power our logic structures using their lungs, and designers can use our
         characterization results to calculate the specific pressure requirements
         of their designs, and choose their air source accordingly.
-        
+
   \section{Conclusion}
     In this paper, we presented AirLogic, a physical toolkit to fabricate
     interactive 3D printed objects. We presented twelve pneumatic widgets that

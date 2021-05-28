@@ -4,37 +4,32 @@
     \includegraphics[width=0.33\textwidth]{print-and-play/blowhole/whales.jpg}
   \end{figure}
 
-  \red{This page should explain how this paper ties together with the thesis}
+  While \at is a successful technique for constructing tangible devices that can
+  respond to user's touch, it had some serious limitations. The most prominent
+  of these limitations was the need of a constant, pressurized source of air,
+  like an air compressor. Additionally, having to connect the device using two
+  points of entry (i.e., one to the air source, another to the sensing
+  apparatus) meant that the designer had to perform a few post-print activities,
+  albeit quick and easy ones.
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare tempus
-  risus id consectetur. In posuere ligula vel neque vehicula, nec rhoncus elit
-  dapibus. Proin facilisis porttitor diam, vitae eleifend odio pellentesque id.
-  Fusce eu semper erat, et malesuada massa. Duis laoreet sed neque a dictum.
-  Quisque convallis accumsan justo sit amet vulputate. Integer auctor eros ac
-  accumsan accumsan. Integer hendrerit urna id convallis tempus. Donec sem est,
-  pretium sit amet gravida sed, suscipit a sapien. In eros nulla, bibendum nec
-  malesuada in, sollicitudin a turpis. In egestas molestie iaculis. Cras eros
-  quam, placerat eget eleifend sed, condimentum sit amet metus.
+  Inspired by these limitations, and the ubiquity of microphones in our daily
+  lives, I developed \bh. This next chapter, which is almost identical to the
+  paper I published by the same name~\cite{Tejada:2018}, and introduces a
+  technique to fabricate tangible devices that can identify user's interactions
+  by acoustically tag locations on the object. In this chapter, I introduce
+  \bh's theory of operation, and characterization and evaluation procedures I
+  carried out to assess its performance.
 
-  Vivamus vitae lacinia lorem. Ut efficitur sollicitudin felis, et iaculis odio.
-  Vestibulum sit amet nulla faucibus, egestas lorem quis, consequat neque.
-  Integer vel laoreet ligula, a varius risus. Curabitur ac eleifend neque.
-  Praesent sagittis volutpat libero, ut maximus arcu iaculis eu. Interdum et
-  malesuada fames ac ante ipsum primis in faucibus. Sed maximus eros eget nisl
-  scelerisque egestas. Mauris bibendum laoreet felis, cursus vestibulum enim
-  condimentum nec.
+  \bh improves on \at in two main ways. First, as it employs acoustic sensing
+  rather than pneumatic sensing, users can provide the air for it to operate by
+  gently blowing on the object's openings. Second, thanks to the ubiquity of
+  microphones, \bh-enabled objects can employ already existing microphones to
+  identify user's interactions. Additionally, \bh uses a mathematical model to
+  identify blowing locations based on the frequency emitted with gently blown.
+  This means that an user can use a \bh-enabled device immediately after
+  removing from the printer.
 
-  Nunc eget faucibus tortor. Fusce nisl lectus, congue in blandit non, pretium
-  non metus. Fusce efficitur varius interdum. Phasellus ullamcorper gravida
-  odio. Nulla accumsan purus risus, vitae porta nibh auctor non. Nulla varius
-  eros scelerisque convallis maximus. In sed blandit augue. Proin commodo lacus
-  ac orci suscipit porta. Aenean vitae libero pretium, convallis dui ut,
-  accumsan leo. Morbi gravida scelerisque sapien quis fringilla. Aliquam nisl
-  dolor, molestie eu nulla quis, malesuada pharetra velit. Vivamus porta dictum
-  metus, vel molestie ex fermentum in. Vestibulum pellentesque vel ante vel
-  feugiat. Integer mattis vitae libero nec laoreet. Aliquam erat volutpat. In
-  hac habitasse platea dictumst.
-
+  \vfill
   \newpage
 
   This chapter is based on the collaborative effort described below.
@@ -70,7 +65,7 @@
 	\noindent
 	\textbf{What was the role of the PhD student in designing the study?}\\
   \textit{The PhD student was the first author of the paper, and responsible
-    from of the described studies.}
+    of the described studies.}
 
 	\bigskip
 
@@ -96,7 +91,25 @@
 
   \newpage
 
-  \section{Abstract}
+  \begin{figure}
+    \centering
+    \subfloat[]{\label{fig:elephant}\includegraphics[height=.21\textwidth]{print-and-play/blowhole/elephant}}
+    \subfloat[]{\label{fig:bar_rand}\includegraphics[height=.21\textwidth]{print-and-play/blowhole/bar_rand1}}
+    \subfloat[]{\label{fig:whales}\includegraphics[height=.21\textwidth]{print-and-play/blowhole/whales}}
+    \subfloat[]{\label{fig:cell}\includegraphics[height=.21\textwidth]{print-and-play/blowhole/cell}}
+
+    \caption{Example \bh applications. The elephant (\ref{fig:elephant}) has six
+    holes (one on the head, one on the back, one on each foot) which, when blown
+    into, activate text-to-speech with different elephant facts. Each bar in the
+    bar chart (\ref{fig:bar_rand}) triggers a readout of the quantity,
+    and can be moved to represent different data. The sperm whale, dolphin, and
+    orca (\ref{fig:whales}) each produce a different tone to trigger
+    videos of those animals. The cell model's blowholes interact with a quiz
+    program to test knowledge of its components (\ref{fig:cell}).}%
+    \label{fig:blowhole_demo}%
+  \end{figure}
+
+  \subsubsection*{Abstract}
     Interactive 3D models have the potential to enhance accessibility and
     education, but can be complex and time-consuming to produce. We present
     \textit{\bh}, a technique for embedding blowing-activated tags into
@@ -134,7 +147,7 @@
     post-processing, or training necessary. The contributions of our work are as
     follows:
 
-    \begin{itemize}
+    \begin{enumerate}
         \item a technique for embedding resonant cavities---printable on
           commodity 3D printers---into existing 3D models, which produce distinct
           pitches when blown into;
@@ -146,7 +159,7 @@
         \item and a user-independent system which recognizes the sounds of the
           user blowing into the cavities and plays back the associated
           annotations.
-    \end{itemize}
+    \end{enumerate}
 
   \section{Blowhole}
     \bh is based on the property of acoustic resonance; a familiar example is
@@ -524,7 +537,7 @@
     
     \subsection*{Reconfigurable Bar Chart} 
       Figure \ref{fig:bar_rand} shows a \bh-enabled physical visualization
-      \cite{Swaminathan:2014hu}. Taking advantage of the Helmholtz property that
+      \cite{Swaminathan:2014}. Taking advantage of the Helmholtz property that
       varying $L_t$ varies the frequency, the base of the bar chart contains
       cavities with identical $d_s$ values. Each bar, being a different height,
       has a different $L_t$; when a bar is plugged into the chart, the tone
